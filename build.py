@@ -119,8 +119,8 @@ def prize_cards():
     out = []
     for i, p in enumerate(S['prizes'], 1):
         out.append(f'<div class="prize p{i}"><div class="place">{p["place"]} Place</div>'
-                   f'<div class="amt">{money(p["student"])}</div><div class="who">to the student</div>'
-                   f'<span class="plus">+ {money(p["school"])} to their school</span></div>')
+                   f'<div class="amt">{money(p["student"])}</div><div class="who">to the student</div><div class="who" style="margin-top:2px">cash <b>or</b> an equal-value tool package</div>'
+                   f'<span class="plus">+ {money(p["school"])} to their school<br><small style="font-weight:400;color:var(--muted)">as cash or tools for the program</small></span></div>')
     return '<div class="prizes">' + ''.join(out) + '</div>'
 
 
@@ -128,7 +128,7 @@ def stats_band():
     return f'''<section class="band-dark"><div class="wrap">
   <div class="section-head"><span class="eyebrow">Investing in the next generation</span>
   <h2>Real money for real talent.</h2>
-  <p>Every dollar is funded by local Great Clips franchisees — going straight to student winners and matched, dollar for dollar, to the schools that trained them.</p></div>
+  <p>Every dollar is funded by local Great Clips franchisees — going straight to student winners and matched, dollar for dollar, to the schools that trained them — as cash or professional tools.</p></div>
   <div class="grid g4">
     <div class="stat"><b>{money(AWARDED)}+</b><span>awarded to students &amp; schools</span></div>
     <div class="stat"><b>{money(PRIZE_YEAR)}</b><span>in prizes every year</span></div>
@@ -157,7 +157,7 @@ def build_home():
 <section class="hero"><div class="hero-bg" style="background-image:url('assets/img/gallery/2025/ctc2025-19.jpg')"></div><div class="wrap">
   <span class="eyebrow">Northeast Ohio’s student haircut competition</span>
   <h1>Create the Cut <em>2027</em></h1>
-  <p class="lede">Cosmetology and barbering students from across Northeast Ohio go shears-to-shears for cash prizes — with every winner’s school taking home a matching gift. Hosted by the Great Clips franchisees of {REGION}.</p>
+  <p class="lede">Cosmetology and barbering students from across Northeast Ohio go shears-to-shears for cash prizes or career-launching tool packages — with every winner’s school taking home a matching gift. Hosted by the Great Clips franchisees of {REGION}.</p>
   <div class="facts"><span>{e(EV["headline_date"])}</span><span>{money(PRIZE_TOP)} top prize</span><span>Free to compete</span></div>
   {cd}
   <div class="btn-row"><a class="btn btn-lime" href="signup.html">Join the 2027 interest list</a><a class="btn btn-ghost" href="event.html">See event details</a></div>
@@ -176,7 +176,7 @@ def build_home():
 
 <section class="band-gray"><div class="wrap">
   <div class="section-head"><span class="eyebrow" style="color:var(--jade)">Prizes</span><h2>Win for yourself. Win for your school.</h2>
-  <p>Each student prize is matched with an equal gift to the nominating school’s program.</p></div>
+  <p>Winners choose a cash prize <b>or</b> a professional tool package of equal value to jump-start their careers — and each school’s matching gift can come as cash or as tools for the program.</p></div>
   {prize_cards()}
 </div></section>
 
@@ -187,7 +187,7 @@ def build_home():
   <div class="grid g3">
     <div class="card">{icon("shears")}<h3>Students</h3><p>Enrolled in (or recently graduated from) a Northeast Ohio cosmetology or barbering program? Join the interest list and ask your instructor to nominate you.</p><a href="signup.html?role=student">Sign up as a student →</a></div>
     <div class="card">{icon("trophy")}<h3>Instructors &amp; schools</h3><p>Nominate your standout students and put your program on the board. Every winning school receives a matching gift.</p><a href="signup.html?role=instructor">Sign up your program →</a></div>
-    <div class="card">{icon("party")}<h3>Family &amp; fans</h3><p>Come cheer! Create the Cut is a high-energy afternoon and spectators are welcome. Get the date and venue the moment they’re set.</p><a href="signup.html?role=spectator">Get event updates →</a></div>
+    <div class="card">{icon("party")}<h3>Family &amp; fans</h3><p>Come cheer! Create the Cut is a high-energy afternoon and spectators are welcome — no sign-up needed.</p><a href="event.html">See event details →</a></div>
   </div>
 </div></section>
 
@@ -213,7 +213,7 @@ def build_home():
 {cta_band()}
 '''
     page('index.html', f'{SITE_NAME} | Great Clips Franchisees of {REGION}',
-         f'Create the Cut is a haircutting competition for Northeast Ohio cosmetology and barbering students — cash prizes plus matching school gifts, hosted by the Great Clips franchisees of {REGION}.',
+         f'Create the Cut is a haircutting competition for Northeast Ohio cosmetology and barbering students — cash or tool-package prizes plus matching school gifts, hosted by the Great Clips franchisees of {REGION}.',
          body)
 
 
@@ -245,7 +245,7 @@ def build_event():
       <div class="step"><h3>Instructors nominate</h3><p>Each program nominates its top students (past events allowed up to two per program).</p></div>
       <div class="step"><h3>Confirm &amp; sign the release</h3><p>Nominees complete the Affidavit of Eligibility &amp; Release (parent/guardian signs if under 18).</p></div>
       <div class="step"><h3>Compete on event day</h3><p>Check in, set up your station and cut against the clock.</p></div>
-      <div class="step"><h3>Awards</h3><p>Top three take home cash prizes — plus matching gifts for their schools.</p></div>
+      <div class="step"><h3>Awards</h3><p>Top three choose a cash prize or an equal-value tool package — plus matching gifts for their schools.</p></div>
     </div>
   </div>
   <div>
@@ -266,7 +266,7 @@ def build_event():
 
 <section><div class="wrap">
   <div class="section-head"><span class="eyebrow" style="color:var(--jade)">Prizes</span><h2>{money(PRIZE_YEAR)} in prizes</h2>
-  <p>Student prizes can go toward tuition or professional tools. Every student prize is matched by an equal gift to the winner’s school program.</p></div>
+  <p>Each winner chooses a cash prize <b>or</b> a professional tool package of the same value to help start their career. Every student prize is matched by an equal gift to the winner’s school program — as cash or as tools for the classroom.</p></div>
   {prize_cards()}
 </div></section>
 
@@ -392,9 +392,6 @@ def build_news():
   <div class="section-head"><h2>Stories</h2></div>
   <div class="grid g3">{arts}</div>
 </div></section>
-<section><div class="wrap"><div class="card" style="max-width:760px">
-  <h3>Media inquiries</h3><p>Covering Create the Cut 2027? We’d love to have you. Use the <a href="signup.html?role=media">sign-up form</a> and choose “Media / sponsor,” and an organizer will be in touch.</p>
-</div></div></section>
 '''
     page('news.html', f'In the News | {SITE_NAME}', 'FOX 8 Cleveland and other news coverage of the Create the Cut student haircut competition.', body)
 
@@ -406,7 +403,7 @@ FAQ = [
         ('Who runs it?', f'The independently owned and operated Great Clips salons of {REGION}. Local franchisees and their salon teams plan, staff and fund the entire event.'),
         ('When and where is the 2027 competition?', f'{e(EV["headline_date"])}. The exact date and venue will be announced soon — <a href="signup.html">join the interest list</a> and you’ll be the first to know. Past competitions were held on a Sunday afternoon in early March.'),
         ('How long does it last?', 'Plan on an afternoon. Past events ran from about 1:00 to 4:30 p.m., with competitor check-in starting around 12:30.'),
-        ('Can family and friends come watch?', 'Yes! Spectators are welcome, and the cheering section is a big part of the fun.'),
+        ('Can family and friends come watch?', 'Yes! Spectators are welcome — no sign-up needed — and the cheering section is a big part of the fun.'),
     ]),
     ('Competing', [
         ('Who is eligible?', 'Students currently enrolled in — or recently graduated from — a cosmetology or barbering program in Northeast Ohio, who are nominated by an instructor at their school.'),
@@ -420,14 +417,13 @@ FAQ = [
     ]),
     ('Prizes', [
         ('What are the prizes?', f'1st place: {money(S["prizes"][0]["student"])} · 2nd place: {money(S["prizes"][1]["student"])} · 3rd place: {money(S["prizes"][2]["student"])}. Each winner’s school receives a matching gift of the same amount.'),
-        ('What can the prize money be used for?', 'Student prizes are meant to help launch a career — for example, tuition or professional tools.'),
+        ('Can I take tools instead of cash?', 'Yes. Winners choose either the cash prize or a professional tool package of equal value to help start their career. Schools can likewise take their matching gift as cash or as tools for their program.'),
         ('How much has been awarded so far?', f'More than {money(AWARDED)} has gone to student winners and their schools across recent competitions — all funded by local Great Clips franchisees.'),
     ]),
-    ('Schools, media & more', [
+    ('Schools & more', [
         ('I’m an instructor. How do I get my program involved?', 'Sign up on the <a href="signup.html?role=instructor">interest form</a> and we’ll send nomination details as soon as they’re available.'),
         ('Will there be photos and video?', 'Yes. The event is professionally photographed and filmed, and local media have covered past competitions. See the <a href="gallery.html">gallery</a> and <a href="news.html">news</a> pages.'),
         ('Does competing lead to a job at Great Clips?', 'There’s no obligation, but many franchisees are hiring and love meeting new talent. Explore openings at <a href="https://jobs.greatclips.com" target="_blank" rel="noopener">jobs.greatclips.com</a>.'),
-        ('I’m with the media or want to sponsor. Who do I contact?', 'Use the <a href="signup.html?role=media">sign-up form</a> and choose “Media / sponsor,” and an organizer will reach out.'),
     ]),
 ]
 
@@ -449,12 +445,11 @@ def build_faq():
 # ---------------------------------------------------------------- sign-up
 def build_signup():
     endpoint = S.get('form_endpoint', '')
-    roles = [('student', 'Student', 'I want to compete'), ('instructor', 'Instructor / school', 'I’ll nominate students'),
-             ('spectator', 'Family / fan', 'Send me event updates'), ('media', 'Media / sponsor', 'I’d like to get involved')]
+    roles = [('student', 'Student', 'I want to compete'), ('instructor', 'Instructor / school', 'I’ll nominate students')]
     role_html = ''.join(f'<label><input type="radio" name="role" value="{v}" required><span>{t}<small>{s}</small></span></label>' for v, t, s in roles)
     body = f'''
 <section class="page-hero">{TRI}<div class="wrap"><span class="eyebrow">Create the Cut 2027</span><h1>Join the interest list</h1>
-<p>Tell us who you are and we’ll email you the moment nominations, dates and details are announced.</p></div></section>
+<p>For students and instructors: tell us who you are and we’ll email you the moment nominations, dates and details are announced.</p></div></section>
 <section class="band-gray"><div class="wrap form-wrap">
 <form class="signup" data-endpoint="{e(endpoint)}">
   <fieldset><legend>I am a…</legend><div class="roles">{role_html}</div></fieldset>
@@ -470,12 +465,11 @@ def build_signup():
     <div class="field role-only" data-roles="student"><label for="f-grad">Expected graduation</label><input id="f-grad" name="expected_graduation" type="text" placeholder="e.g. May 2027"></div>
     <div class="field role-only" data-roles="instructor"><label for="f-n">Students you may nominate</label><select id="f-n" name="students_to_nominate"><option value="">Choose…</option><option>1</option><option>2</option><option>Not sure yet</option></select></div>
     <div class="field role-only" data-roles="student"><label for="f-age">Will you be 18+ on event day?</label><select id="f-age" name="adult_on_event_day"><option value="">Choose…</option><option>Yes</option><option>No</option></select></div>
-    <div class="field role-only" data-roles="media spectator"><label for="f-org">Organization / affiliation <i>(optional)</i></label><input id="f-org" name="organization" type="text"></div>
     <div class="field role-only" data-roles="instructor student"><label for="f-instr">Instructor name <i>(optional)</i></label><input id="f-instr" name="instructor_name" type="text"></div>
     <div class="field"><label for="f-city">City</label><input id="f-city" name="city" type="text" autocomplete="address-level2"></div>
     <div class="field full"><label for="f-heard">How did you hear about Create the Cut?</label>
       <select id="f-heard" name="heard_about"><option value="">Choose…</option><option>My instructor / school</option><option>A Great Clips salon</option><option>FOX 8 / news</option><option>Social media</option><option>I competed or attended before</option><option>Friend or family</option><option>Other</option></select></div>
-    <div class="field full"><label for="f-notes">Anything else? <i>(optional)</i></label><textarea id="f-notes" name="notes" placeholder="Questions, how many guests you might bring, etc."></textarea></div>
+    <div class="field full"><label for="f-notes">Anything else? <i>(optional)</i></label><textarea id="f-notes" name="notes" placeholder="Questions for the organizers, etc."></textarea></div>
   </div></fieldset>
   <label class="check"><input type="checkbox" name="consent" value="yes" required><span>Yes, email me (and text me if I gave a phone number) about Create the Cut. I can opt out anytime.</span></label>
   <input class="hp" type="text" name="website" tabindex="-1" autocomplete="off" aria-hidden="true">
@@ -484,13 +478,13 @@ def build_signup():
 </form>
 <aside class="aside-card">
   <h3>Why compete?</h3>
-  <div class="big">{money(PRIZE_TOP)}</div><p style="color:#dcebe6">top student prize — plus a matching {money(S["prizes"][0]["school"])} for your school</p>
+  <div class="big">{money(PRIZE_TOP)}</div><p style="color:#dcebe6">top student prize — take it as cash or an equal-value tool package, plus a matching {money(S["prizes"][0]["school"])} for your school</p>
   <ul><li>Show your skills in front of judges, family and media</li><li>Meet local salon owners who are hiring</li><li>Free to compete</li></ul>
   <p style="color:#dcebe6;font-size:.88rem;margin:0">This interest form is not your official entry — competitors are nominated by their instructors. We’ll send next steps by email.</p>
 </aside>
 </div></section>
 '''
-    page('signup.html', f'Sign Up | {SITE_NAME}', 'Join the Create the Cut 2027 interest list — students, instructors, family and media.', body)
+    page('signup.html', f'Sign Up | {SITE_NAME}', 'Join the Create the Cut 2027 interest list — for cosmetology and barbering students and their instructors.', body)
 
 
 if __name__ == '__main__':
