@@ -5,14 +5,18 @@
   "contact_email": "",
   "_contact_email_help": "Optional public contact address shown in the footer + FAQ. Leave blank to hide.",
   "event_2027": {
-    "headline_date": "Early March 2027",
-    "date_detail": "Sunday afternoon — exact date announced soon",
-    "venue": "Northeast Ohio — venue announced soon",
-    "venue_detail": "",
+    "headline_date": "Sunday, March 14, 2027",
+    "date_detail": "Save the date! Start time to be announced",
+    "venue": "Don Umerley Civic Center",
+    "venue_detail": "21016 Hilliard Blvd, Rocky River, OH 44116",
     "time": "Afternoon (past events ran about 1:00–4:30 p.m.)",
     "nomination_deadline": "Mid-January 2027 (exact date TBA)",
-    "countdown_iso": "",
-    "_countdown_help": "Set to e.g. 2027-03-07T13:00:00-05:00 once the date is final and a countdown appears on the home page."
+    "countdown_iso": "2027-03-14T00:00:00-05:00",
+    "_countdown_help": "Set to e.g. 2027-03-07T13:00:00-05:00 once the date is final and a countdown appears on the home page.",
+    "maps_url": "https://www.google.com/maps/search/?api=1&query=Don+Umerley+Civic+Center+21016+Hilliard+Blvd+Rocky+River+OH+44116",
+    "save_the_date_img": "assets/img/save-the-date-2027.jpg",
+    "save_the_date_pdf": "assets/ctc-save-the-date-2027.pdf",
+    "ics": "assets/create-the-cut-2027.ics"
   },
   "prizes": [
     {

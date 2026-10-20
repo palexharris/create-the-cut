@@ -1,0 +1,15 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Create the Cut//2027//EN
+CALSCALE:GREGORIAN
+BEGIN:VEVENT
+UID:create-the-cut-2027@palexharris.github.io
+DTSTAMP:20261020T000000Z
+DTSTART;VALUE=DATE:20270314
+DTEND;VALUE=DATE:20270315
+SUMMARY:Create the Cut 2027 – Haircut Competition
+LOCATION:Don Umerley Civic Center\, 21016 Hilliard Blvd\, Rocky River\, OH 44116
+DESCRIPTION:Northeast Ohio student haircut competition hosted by the Great Clips franchisees of Cleveland-Akron-Canton. Start time TBA – details at https://palexharris.github.io/create-the-cut/event.html
+URL:https://palexharris.github.io/create-the-cut/
+END:VEVENT
+END:VCALENDAR

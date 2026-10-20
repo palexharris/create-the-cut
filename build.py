@@ -147,21 +147,36 @@ def cta_band(h='Ready to show what you can do?', p='Get on the list for Create t
 
 
 # ---------------------------------------------------------------- home
+def save_the_date():
+    return f'''<section class="band-mint"><div class="wrap split">
+  <a href="{EV["save_the_date_pdf"]}" target="_blank" rel="noopener"><img src="{EV["save_the_date_img"]}" alt="Save the date: Create the Cut, Sunday, March 14, 2027, Don Umerley Civic Center, Rocky River" loading="lazy" style="max-height:none;object-fit:contain;background:#fff"></a>
+  <div>
+    <span class="eyebrow" style="color:var(--jade)">Save the date</span>
+    <h2>{e(EV["headline_date"])}</h2>
+    <p style="font-size:1.15rem;margin-bottom:4px"><b>{e(EV["venue"])}</b></p>
+    <p><a href="{e(EV["maps_url"])}" target="_blank" rel="noopener">{e(EV["venue_detail"])}</a></p>
+    <p>Instructors: start thinking about who you’ll nominate. Students: tell your instructor you want in. Start time and nomination details are coming soon.</p>
+    <div class="btn-row"><a class="btn btn-jade" href="{EV["ics"]}" download>Add to calendar</a><a class="btn btn-outline" href="{EV["save_the_date_pdf"]}" download>Download the flyer</a></div>
+  </div>
+</div></section>'''
+
+
 def build_home():
     cd = ''
     if EV.get('countdown_iso'):
-        cd = (f'<div class="countdown" data-to="{EV["countdown_iso"]}"><div><b data-d>–</b><small>days</small></div>'
-              '<div><b data-h>–</b><small>hours</small></div><div><b data-m>–</b><small>min</small></div></div>')
+        cd = f'<div class="countdown" data-to="{EV["countdown_iso"]}"><div><b data-d>–</b><small>days to go</small></div></div>'
     w25 = next(y for y in YEARS if y['year'] == 2025)['winners']
     body = f'''
 <section class="hero"><div class="hero-bg" style="background-image:url('assets/img/gallery/2025/ctc2025-19.jpg')"></div><div class="wrap">
   <span class="eyebrow">Northeast Ohio’s student haircut competition</span>
   <h1>Create the Cut <em>2027</em></h1>
   <p class="lede">Cosmetology and barbering students from across Northeast Ohio go shears-to-shears for cash prizes or career-launching tool packages — with every winner’s school taking home a matching gift. Hosted by the Great Clips franchisees of {REGION}.</p>
-  <div class="facts"><span>{e(EV["headline_date"])}</span><span>{money(PRIZE_TOP)} top prize</span><span>Free to compete</span></div>
+  <div class="facts"><span>{e(EV["headline_date"])}</span><span>{e(EV["venue"])}, Rocky River</span><span>{money(PRIZE_TOP)} top prize</span><span>Free to compete</span></div>
   {cd}
   <div class="btn-row"><a class="btn btn-lime" href="signup.html">Join the 2027 interest list</a><a class="btn btn-ghost" href="event.html">See event details</a></div>
 </div></section>
+
+{save_the_date()}
 
 <section><div class="wrap split">
   <div>
@@ -221,13 +236,13 @@ def build_home():
 def build_event():
     body = f'''
 <section class="page-hero">{TRI}<div class="wrap"><span class="eyebrow">Create the Cut 2027</span><h1>Event details</h1>
-<p>Everything competitors, instructors and spectators need to know. Final date and venue are coming soon — <a href="signup.html" style="color:var(--lime)">join the list</a> to hear first.</p></div></section>
+<p>Save the date: <b>{e(EV["headline_date"])}</b> at the {e(EV["venue"])} in Rocky River. Everything competitors, instructors and spectators need to know — <a href="signup.html" style="color:var(--lime)">join the list</a> for nomination details.</p></div></section>
 
 <section><div class="wrap">
   <div class="glance">
-    <div><small>When</small><strong>{e(EV["headline_date"])}</strong><span>{e(EV["date_detail"])}</span></div>
+    <div><small>When</small><strong>{e(EV["headline_date"])}</strong><span>{e(EV["date_detail"])} · <a href="{EV["ics"]}" download>Add to calendar</a></span></div>
     <div><small>Time</small><strong>Afternoon</strong><span>{e(EV["time"])}</span></div>
-    <div><small>Where</small><strong>{e(EV["venue"])}</strong><span>{e(EV.get("venue_detail") or "Past hosts: Solon Community Center, Don Umerley Civic Center")}</span></div>
+    <div><small>Where</small><strong>{e(EV["venue"])}</strong><span><a href="{e(EV["maps_url"])}" target="_blank" rel="noopener">{e(EV["venue_detail"])}</a></span></div>
     <div><small>Who competes</small><strong>Instructor-nominated students</strong><span>Cosmetology &amp; barbering programs</span></div>
     <div><small>Nominations due</small><strong>{e(EV["nomination_deadline"])}</strong><span>Last year’s deadline was Jan. 15</span></div>
     <div><small>Cost</small><strong>Free</strong><span>To compete and to watch</span></div>
@@ -401,7 +416,7 @@ FAQ = [
     ('About the event', [
         ('What is Create the Cut?', 'A haircutting competition for Northeast Ohio cosmetology and barbering students. Instructor-nominated students compete through a series of timed haircuts on mannequins, and the top three win cash prizes — with a matching gift to each winner’s school.'),
         ('Who runs it?', f'The independently owned and operated Great Clips salons of {REGION}. Local franchisees and their salon teams plan, staff and fund the entire event.'),
-        ('When and where is the 2027 competition?', f'{e(EV["headline_date"])}. The exact date and venue will be announced soon — <a href="signup.html">join the interest list</a> and you’ll be the first to know. Past competitions were held on a Sunday afternoon in early March.'),
+        ('When and where is the 2027 competition?', f'{e(EV["headline_date"])}, at the {e(EV["venue"])}, {e(EV["venue_detail"])}. <a href="{EV["ics"]}" download>Add it to your calendar</a> and <a href="signup.html">join the interest list</a> for nomination details and the start time.'),
         ('How long does it last?', 'Plan on an afternoon. Past events ran from about 1:00 to 4:30 p.m., with competitor check-in starting around 12:30.'),
         ('Can family and friends come watch?', 'Yes! Spectators are welcome — no sign-up needed — and the cheering section is a big part of the fun.'),
     ]),

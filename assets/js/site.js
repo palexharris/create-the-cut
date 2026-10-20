@@ -50,9 +50,10 @@
     var end = new Date(cd.dataset.to).getTime();
     var tick = function () {
       var s = Math.max(0, Math.floor((end - Date.now()) / 1000));
-      cd.querySelector('[data-d]').textContent = Math.floor(s / 86400);
-      cd.querySelector('[data-h]').textContent = Math.floor(s % 86400 / 3600);
-      cd.querySelector('[data-m]').textContent = Math.floor(s % 3600 / 60);
+      cd.querySelector('[data-d]').textContent = Math.ceil(s / 86400);
+      var h = cd.querySelector('[data-h]'), m = cd.querySelector('[data-m]');
+      if (h) h.textContent = Math.floor(s % 86400 / 3600);
+      if (m) m.textContent = Math.floor(s % 3600 / 60);
     };
     tick(); setInterval(tick, 30000);
   }
