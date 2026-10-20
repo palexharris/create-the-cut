@@ -1,0 +1,289 @@
+{
+  "_readme": "Edit this file, then run: python3 build.py  (regenerates every .html page). Fields marked _todo still need confirming.",
+  "form_endpoint": "",
+  "_form_endpoint_help": "Paste the Google Apps Script web-app URL here (see apps-script/README.md). Until it is set, the sign-up form shows a 'coming soon' note instead of submitting.",
+  "contact_email": "",
+  "_contact_email_help": "Optional public contact address shown in the footer + FAQ. Leave blank to hide.",
+  "event_2027": {
+    "headline_date": "Early March 2027",
+    "date_detail": "Sunday afternoon — exact date announced soon",
+    "venue": "Northeast Ohio — venue announced soon",
+    "venue_detail": "",
+    "time": "Afternoon (past events ran about 1:00–4:30 p.m.)",
+    "nomination_deadline": "Mid-January 2027 (exact date TBA)",
+    "countdown_iso": "",
+    "_countdown_help": "Set to e.g. 2027-03-07T13:00:00-05:00 once the date is final and a countdown appears on the home page."
+  },
+  "prizes": [
+    {
+      "place": "1st",
+      "student": 1000,
+      "school": 1000
+    },
+    {
+      "place": "2nd",
+      "student": 750,
+      "school": 750
+    },
+    {
+      "place": "3rd",
+      "student": 500,
+      "school": 500
+    }
+  ],
+  "hosts": [
+    "Alex Harris",
+    "Clara Osterhage",
+    "Lorie Cathcart",
+    "Cathy Taggart"
+  ],
+  "years": [
+    {
+      "year": 2026,
+      "date": "Sunday, March 8, 2026",
+      "venue": "Don Umerley Civic Center",
+      "city": "Rocky River, OH",
+      "competitors": 29,
+      "judges": 5,
+      "summary": "Year three moved to the Don Umerley Civic Center in Rocky River. Twenty-nine instructor-nominated students performed three timed mannequin cuts — long, medium and short — in front of five judges, family, instructors and Fox 8 Cleveland.",
+      "prize_total": 4500,
+      "winners": [],
+      "_winners_todo": "Add 2026 1st/2nd/3rd: {\"place\":\"1st\",\"name\":\"\",\"school\":\"\"}",
+      "participants": [],
+      "gallery": "2026"
+    },
+    {
+      "year": 2025,
+      "date": "Sunday, March 9, 2025",
+      "venue": "Solon Community Center",
+      "city": "Solon, OH",
+      "competitors": 31,
+      "judges": null,
+      "summary": "Thirty-one students from public and private cosmetology and barbering programs across Northeast Ohio packed the Solon Community Center. Each program could send two students, and the top three walked away with oversized checks — and matching gifts for their schools.",
+      "prize_total": 4500,
+      "winners": [
+        {
+          "place": "1st",
+          "name": "Emily Theibert",
+          "school": "EHOVE Career Center (Adult Education)",
+          "amount": 1000,
+          "photo": "assets/img/gallery/2025/ctc2025-37.jpg"
+        },
+        {
+          "place": "2nd",
+          "name": "Nina Alfieri",
+          "school": "Auburn Career Center",
+          "amount": 750,
+          "photo": "assets/img/gallery/2025/ctc2025-32.jpg"
+        },
+        {
+          "place": "3rd",
+          "name": "Katherine Pfeuffer",
+          "school": "Lorain County JVS",
+          "amount": 500,
+          "photo": "assets/img/gallery/2025/ctc2025-29.jpg"
+        }
+      ],
+      "participants": [
+        [
+          "Emily Theibert",
+          "EHOVE Career Center (Adult Education)"
+        ],
+        [
+          "Nina Alfieri",
+          "Auburn Career Center"
+        ],
+        [
+          "Katherine Pfeuffer",
+          "Lorain County JVS"
+        ],
+        [
+          "Alexandre Dorman",
+          "Timken High School"
+        ],
+        [
+          "Keidy Ramos",
+          "Timken High School"
+        ],
+        [
+          "Aaliyah Bell",
+          "Timken High School"
+        ],
+        [
+          "Liz Wilson",
+          "Cuyahoga Valley Career Center (Adult Education)"
+        ],
+        [
+          "Kali Jones",
+          "Cuyahoga Valley Career Center (Adult Education)"
+        ],
+        [
+          "Alexis Wateska",
+          "Cuyahoga Valley Career Center"
+        ],
+        [
+          "Marianne Harrington",
+          "Cuyahoga Valley Career Center"
+        ],
+        [
+          "Shannon Brown",
+          "National Beauty College"
+        ],
+        [
+          "Kea Tarrance",
+          "National Beauty College"
+        ],
+        [
+          "Bailee Randles",
+          "EHOVE Career Center (Adult Education)"
+        ],
+        [
+          "Aurora Stergis",
+          "Glen Oak High School"
+        ],
+        [
+          "Maci Spence",
+          "Glen Oak High School"
+        ],
+        [
+          "Lillie Blakemore",
+          "Glen Oak High School"
+        ],
+        [
+          "Natalie Infantino",
+          "Glen Oak High School"
+        ],
+        [
+          "Kailoni Figueroa",
+          "A-Tech (Ashtabula)"
+        ],
+        [
+          "Sophia Licate",
+          "A-Tech (Ashtabula)"
+        ],
+        [
+          "Adia Ingram",
+          "A-Tech (Ashtabula)"
+        ],
+        [
+          "Jordyn Fetters",
+          "A-Tech (Ashtabula)"
+        ],
+        [
+          "Sara Jo-Jones",
+          "Raphael's School of Beauty Culture"
+        ],
+        [
+          "Jennavecia Mullane",
+          "R.G. Drage Career Technical Center"
+        ],
+        [
+          "Taylor McCully",
+          "R.G. Drage Career Technical Center"
+        ],
+        [
+          "Ella Perfetto",
+          "Auburn Career Center"
+        ],
+        [
+          "Hailey Hodge",
+          "Auburn Career Center"
+        ],
+        [
+          "Nadia Lough",
+          "Maplewood Career Center"
+        ],
+        [
+          "Maggie Kassan",
+          "Maplewood Career Center"
+        ],
+        [
+          "Kiera Cresong",
+          "Maplewood Career Center"
+        ],
+        [
+          "Danielle Helms",
+          "Elite (Ashland)"
+        ],
+        [
+          "Madison Bendel",
+          "Medina County Career Center"
+        ],
+        [
+          "Devon Downing",
+          "All-State Barber College"
+        ],
+        [
+          "Jasmine Miceli",
+          "Inner State Beauty School"
+        ]
+      ],
+      "_participants_note": "From the 2025 sign-up list (33 names). Fox 8 reported 31 competed — confirm before publishing.",
+      "gallery": "2025"
+    },
+    {
+      "year": 2024,
+      "date": "Sunday, March 3, 2024",
+      "venue": "",
+      "city": "Northeast Ohio",
+      "competitors": null,
+      "judges": null,
+      "summary": "The debut. Great Clips franchisees across Cleveland, Akron and Canton teamed up to launch a hands-on haircutting competition for the region's cosmetology students — and a new tradition was born.",
+      "prize_total": null,
+      "winners": [],
+      "_todo": "Add 2024 venue, competitor count, prize total, winners and participants.",
+      "participants": [],
+      "gallery": ""
+    }
+  ],
+  "videos": [
+    {
+      "type": "file",
+      "src": "assets/video/ctc-2025-promo.mp4",
+      "poster": "assets/img/gallery/2025/ctc2025-02.jpg",
+      "title": "Create the Cut 2025 — 30-second promo",
+      "year": 2025
+    },
+    {
+      "type": "file",
+      "src": "assets/video/ctc-2025-recap.mp4",
+      "poster": "assets/img/gallery/2025/ctc2025-01.jpg",
+      "title": "Create the Cut 2025 — event recap",
+      "year": 2025
+    }
+  ],
+  "news": {
+    "youtube": [
+      {
+        "id": "rX6pggy170c",
+        "title": "Create the Cut on Fox 8 — New Day Cleveland",
+        "outlet": "FOX 8 Cleveland · New Day Cleveland",
+        "date": "April 2025",
+        "year": 2025
+      }
+    ],
+    "articles": [
+      {
+        "outlet": "FOX 8 Cleveland",
+        "title": "Local haircut competition a unique opportunity for students",
+        "date": "February 16, 2026",
+        "url": "https://fox8.com/news/local-haircut-competition-a-unique-opportunity-for-students/",
+        "blurb": "Fox 8 previews the 2026 competition at the Don Umerley Civic Center in Rocky River."
+      },
+      {
+        "outlet": "Great Clips Careers",
+        "title": "Students Compete to “Create the Cut”",
+        "date": "Spring 2026",
+        "url": "https://jobs.greatclips.com/students-compete-create-cut-blog",
+        "blurb": "The Great Clips Life blog goes behind the scenes with the franchisees who host the event."
+      },
+      {
+        "outlet": "FOX 8 Cleveland",
+        "title": "Good at hair? NE Ohio haircut competition offers thousands in scholarships, tool kits",
+        "date": "March 4, 2025",
+        "url": "https://fox8.com/news/good-at-hair-haircut-competition-offers-thousands-in-scholarships-tool-kits/",
+        "blurb": "Fox 8 previews the 2025 competition at the Solon Community Center."
+      }
+    ]
+  }
+}
