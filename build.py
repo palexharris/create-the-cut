@@ -202,7 +202,7 @@ def build_home():
   <div class="grid g3">
     <div class="card">{icon("shears")}<h3>Students</h3><p>Enrolled in (or recently graduated from) a Northeast Ohio cosmetology or barbering program? Submit your interest, then ask your instructor to nominate you — only instructors can enter students.</p><a href="signup.html?role=student">Submit student interest →</a></div>
     <div class="card">{icon("trophy")}<h3>Instructors &amp; schools</h3><p>All competitors are nominated by their instructors. Sign up to receive the nomination form, then put your program on the board. Every winning school receives a matching gift.</p><a href="signup.html?role=instructor">Sign up your program →</a></div>
-    <div class="card">{icon("party")}<h3>Family &amp; fans</h3><p>Come cheer! Create the Cut is a high-energy afternoon and spectators are welcome — no sign-up needed.</p><a href="event.html">See event details →</a></div>
+    <div class="card">{icon("party")}<h3>Family &amp; fans</h3><p>Come cheer! Create the Cut is a high-energy afternoon and spectators are welcome — no sign-up needed, and light refreshments are provided.</p><a href="event.html">See event details →</a></div>
   </div>
 </div></section>
 
@@ -293,7 +293,7 @@ def build_event():
       <li>Signed Affidavit of Eligibility &amp; Release — a parent or guardian also signs if you’re under 18.</li>
     </ul></div>
   <div class="card">{icon("chat")}<h3>Spectators &amp; media</h3>
-    <p>Family, friends, instructors and classmates are welcome to come cheer — the energy in the room is a big part of the day.</p>
+    <p>Family, friends, instructors and classmates are welcome to come cheer — the energy in the room is a big part of the day. No sign-up needed, and light refreshments are provided.</p>
     <p>The event is photographed and filmed, and local media including FOX 8 Cleveland have covered past competitions.</p></div>
 </div></section>
 
@@ -418,7 +418,7 @@ FAQ = [
         ('Who runs it?', f'The independently owned and operated Great Clips salons of {REGION}. Local franchisees and their salon teams plan, staff and fund the entire event.'),
         ('When and where is the 2027 competition?', f'{e(EV["headline_date"])}, at the {e(EV["venue"])}, {e(EV["venue_detail"])}. <a href="{EV["ics"]}" download>Add it to your calendar</a> and <a href="signup.html">join the interest list</a> for nomination details and the start time.'),
         ('How long does it last?', 'Plan on an afternoon. Past events ran from about 1:00 to 4:30 p.m., with competitor check-in starting around 12:30.'),
-        ('Can family and friends come watch?', 'Yes! Spectators are welcome — no sign-up needed — and the cheering section is a big part of the fun.'),
+        ('Can family and friends come watch?', 'Yes! Spectators are welcome — no sign-up needed — and light refreshments are provided. The cheering section is a big part of the fun.'),
     ]),
     ('Competing', [
         ('Who is eligible?', 'Students currently enrolled in — or recently graduated from — a cosmetology or barbering program in Northeast Ohio, who are nominated by an instructor at their school.'),
