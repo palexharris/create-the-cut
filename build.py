@@ -181,8 +181,8 @@ def build_home():
 <section><div class="wrap split">
   <div>
     <span class="eyebrow" style="color:var(--jade)">What is Create the Cut?</span>
-    <h2>Three cuts. One clock. Real stakes.</h2>
-    <p>Create the Cut gives the region’s most promising stylists a stage. Instructors nominate their top students, who then compete on mannequins through a series of timed haircuts — long, medium and short — while a panel of judges scores their technique and finished looks.</p>
+    <h2>Two cuts. One clock. Real stakes.</h2>
+    <p>Create the Cut gives the region’s most promising stylists a stage. Instructors nominate their top students, who then compete on mannequins through two timed rounds — a haircut and style, then a second haircut — while a panel of judges scores their technique and finished looks.</p>
     <p>Family, friends and instructors pack the room to cheer them on, and the top three walk away with oversized checks, bragging rights and a head start on their careers.</p>
     <a class="btn btn-jade" href="event.html">How it works</a>
   </div>
@@ -253,27 +253,29 @@ def build_event():
   <div>
     <span class="eyebrow" style="color:var(--jade)">The competition</span>
     <h2>How it works</h2>
-    <p>Competitors work on mannequins and complete a series of timed haircuts in sequence — a <b>long</b> cut, a <b>medium</b> cut and a <b>short</b> cut — with roughly 15–20 minutes for each. Judges circulate the floor while students cut, then assess the finished results to assign scores.</p>
+    <p>Competitors work on mannequins through two timed rounds of about 40 minutes each — <b>Round 1: a haircut and style</b>, then <b>Round 2: a second haircut</b>. Judges score each round as soon as the clock stops.</p>
     <p>The highest combined scores take 1st, 2nd and 3rd place, and winners are announced and presented with their checks at the end of the afternoon.</p>
     <div class="steps" style="margin-top:26px">
       <div class="step"><h3>Students submit interest</h3><p>Students let us know they’re interested on this site — this is not an entry. Instructors sign up to receive the nomination form.</p></div>
       <div class="step"><h3>Instructors nominate</h3><p><b>All competitors must be nominated by their cosmetology school instructor</b> — students can’t enter themselves. Past events allowed up to two nominees per program.</p></div>
       <div class="step"><h3>Confirm &amp; sign the release</h3><p>Nominees complete the Affidavit of Eligibility &amp; Release (parent/guardian signs if under 18).</p></div>
-      <div class="step"><h3>Compete on event day</h3><p>Check in, set up your station and cut against the clock.</p></div>
+      <div class="step"><h3>Compete on event day</h3><p>Check in, set up your station and cut against the clock — two rounds, about 40 minutes each.</p></div>
       <div class="step"><h3>Awards</h3><p>Top three choose a cash prize or an equal-value tool package — plus matching gifts for their schools.</p></div>
     </div>
   </div>
   <div>
-    <img src="assets/img/gallery/2025/ctc2025-21.jpg" alt="Competitor working on a short cut" loading="lazy" style="margin-bottom:22px">
+    <img src="assets/img/gallery/2025/ctc2025-21.jpg" alt="Competitor working on a haircut" loading="lazy" style="margin-bottom:22px">
     <div class="card">
       <h3>Event-day schedule</h3>
-      <p style="color:var(--muted);font-size:.92rem">Based on past events — the final run of show is sent to confirmed competitors.</p>
+      <p style="color:var(--muted);font-size:.92rem">Based on the 2026 run of show — the 2027 schedule is sent to confirmed competitors.</p>
       <ul class="sched">
-        <li><b>12:30 p.m.</b><span>Competitor check-in &amp; station setup</span></li>
-        <li><b>1:00 p.m.</b><span>Welcome, rules &amp; judges’ introductions</span></li>
-        <li><b>Round 1–3</b><span>Long, medium and short cuts — about 15–20 minutes each</span></li>
-        <li><b>Judging</b><span>Judges score each finished look</span></li>
-        <li><b>≈ 4:00 p.m.</b><span>Winners announced &amp; checks presented</span></li>
+        <li><b>12:00 p.m.</b><span>Competitor &amp; educator check-in, swag bags, station setup</span></li>
+        <li><b>12:30 p.m.</b><span>Competitor orientation</span></li>
+        <li><b>1:00 p.m.</b><span>Welcome from the emcees</span></li>
+        <li><b>1:10 p.m.</b><span>Round 1: haircut &amp; style (40 min), then judging</span></li>
+        <li><b>2:15 p.m.</b><span>Round 2: haircut (40 min)</span></li>
+        <li><b>3:00 p.m.</b><span>Final judging</span></li>
+        <li><b>3:20 p.m.</b><span>Winners announced &amp; prizes presented</span></li>
       </ul>
     </div>
   </div>
@@ -322,7 +324,7 @@ def build_past():
                 f'<div class="winner p{i}">'
                 + (f'<img src="{w["photo"]}" data-full="{w["photo"]}" alt="{e(w["name"])}, {w["place"]} place {y["year"]}" loading="lazy" style="border-radius:10px;margin:-6px -6px 16px;width:calc(100% + 12px);aspect-ratio:4/3;object-fit:cover;cursor:zoom-in">' if w.get('photo') else '')
                 + f'<div class="medal">{w["place"]}</div><div class="nm">{e(w["name"])}</div><div class="sc">{e(w["school"])}</div>'
-                + (f'<div class="amt"><b>{money(w["amount"])}</b> to the student + <b>{money(w["amount"])}</b> to the school</div>' if w.get('amount') else '')
+                + (f'<div class="amt"><b>{money(w["amount"])}</b> to the student{" (" + ("tool package" if w["choice"] == "tools" else "cash") + ")" if w.get("choice") else ""} + <b>{money(w["amount"])}</b> to the school</div>' if w.get('amount') else '')
                 + (f'<div class="amt">{e(w["prize_text"])}</div>' if w.get('prize_text') else '')
                 + '</div>' for i, w in enumerate(y['winners'], 1)) + '</div>'
         else:
@@ -415,10 +417,10 @@ def build_news():
 # ---------------------------------------------------------------- FAQ
 FAQ = [
     ('About the event', [
-        ('What is Create the Cut?', 'A haircutting competition for Northeast Ohio cosmetology and barbering students. Instructor-nominated students compete through a series of timed haircuts on mannequins, and the top three win cash prizes — with a matching gift to each winner’s school.'),
+        ('What is Create the Cut?', 'A haircutting competition for Northeast Ohio cosmetology and barbering students. Instructor-nominated students compete through two timed rounds on mannequins, and the top three win cash prizes — with a matching gift to each winner’s school.'),
         ('Who runs it?', f'The independently owned and operated Great Clips salons of {REGION}. Local franchisees and their salon teams plan, staff and fund the entire event.'),
         ('When and where is the 2027 competition?', f'{e(EV["headline_date"])}, at the {e(EV["venue"])}, {e(EV["venue_detail"])}. <a href="{EV["ics"]}" download>Add it to your calendar</a> and <a href="signup.html">join the interest list</a> for nomination details and the start time.'),
-        ('How long does it last?', 'Plan on an afternoon. Past events ran from about 1:00 to 4:30 p.m., with competitor check-in starting around 12:30.'),
+        ('How long does it last?', 'Plan on an afternoon. In 2026, check-in opened at noon, the competition started at 1:00 and winners were announced around 3:20.'),
         ('Can family and friends come watch?', 'Yes! Spectators are welcome — no sign-up needed — and light refreshments are provided. The cheering section is a big part of the fun.'),
     ]),
     ('Competing', [
@@ -427,8 +429,8 @@ FAQ = [
         ('Does the student interest form enter me in the competition?', 'No. The student form only tells us you’re interested so we can keep you posted. To compete, you must be nominated by your cosmetology school instructor.'),
         ('How many students can each school send?', 'In past years each program could nominate up to two students. The 2027 limit will be shared when nominations open.'),
         ('Does it cost anything to compete?', 'No — there is no entry fee.'),
-        ('What will I have to cut?', 'Competitors work on mannequins and complete timed haircuts in sequence — a long cut, a medium cut and a short cut — with roughly 15–20 minutes for each.'),
-        ('How is it judged?', 'A panel of judges circulates while competitors work and scores each finished look. The highest scores take 1st, 2nd and 3rd.'),
+        ('What will I have to cut?', 'Competitors work on mannequins through two timed rounds of about 40 minutes each: a haircut and style, then a second haircut.'),
+        ('How is it judged?', 'A panel of judges scores each round right after time is called. Combined scores decide 1st, 2nd and 3rd.'),
         ('What do I need to bring?', 'Confirmed competitors receive a packet with the rules, supply list and check-in details before the event.'),
         ('I’m under 18 — can I still compete?', 'Yes. Every competitor signs an Affidavit of Eligibility & Release, and a parent or guardian also signs if you’re under 18.'),
     ]),

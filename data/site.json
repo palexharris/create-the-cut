@@ -47,14 +47,129 @@
       "date": "Sunday, March 8, 2026",
       "venue": "Don Umerley Civic Center",
       "city": "Rocky River, OH",
-      "competitors": 29,
-      "judges": 5,
-      "summary": "Year three moved to the Don Umerley Civic Center in Rocky River. Twenty-nine instructor-nominated students performed three timed mannequin cuts — long, medium and short — in front of five judges, family, instructors and Fox 8 Cleveland.",
+      "competitors": 23,
+      "judges": null,
+      "summary": "Year three moved to the Don Umerley Civic Center in Rocky River. Twenty-three instructor-nominated students from twelve programs took on two timed rounds — a haircut and style, then a second haircut — in front of judges, educators, families and FOX 8 Cleveland. Winners chose their prize: cash or a professional tool package of equal value.",
       "prize_total": 4500,
-      "winners": [],
-      "_winners_todo": "Add 2026 1st/2nd/3rd: {\"place\":\"1st\",\"name\":\"\",\"school\":\"\"}",
-      "participants": [],
-      "gallery": "2026"
+      "winners": [
+        {
+          "place": "1st",
+          "name": "Alexis Heidinger",
+          "school": "Wayne County Schools Career Center (Adult Education)",
+          "amount": 1000,
+          "choice": "cash"
+        },
+        {
+          "place": "2nd",
+          "name": "Alece Evanto",
+          "school": "Glen Oak High School",
+          "amount": 750,
+          "choice": "tools"
+        },
+        {
+          "place": "3rd",
+          "name": "Marianne Harrington",
+          "school": "Cuyahoga Valley Career Center",
+          "amount": 500,
+          "choice": "tools"
+        }
+      ],
+      "participants": [
+        [
+          "Alexis Heidinger",
+          "Wayne County Schools Career Center (Adult Education)"
+        ],
+        [
+          "Alece Evanto",
+          "Glen Oak High School"
+        ],
+        [
+          "Marianne Harrington",
+          "Cuyahoga Valley Career Center"
+        ],
+        [
+          "Alexis Hunt",
+          "Timken High School"
+        ],
+        [
+          "Veronica Ball",
+          "Glen Oak High School"
+        ],
+        [
+          "Sierra Murphy",
+          "A-Tech (Ashtabula)"
+        ],
+        [
+          "Alexis Warne",
+          "Wayne County Schools Career Center (Adult Education)"
+        ],
+        [
+          "Abigail Pollen",
+          "Wayne County Schools Career Center"
+        ],
+        [
+          "Areli Moreno Razo",
+          "Auburn Career Center"
+        ],
+        [
+          "Taylor McCully",
+          "R.G. Drage Career Technical Center"
+        ],
+        [
+          "Macy Smith",
+          "Glen Oak High School"
+        ],
+        [
+          "Ava Weirtz",
+          "Glen Oak High School"
+        ],
+        [
+          "Markie Luckie",
+          "Gerber Akron Beauty School"
+        ],
+        [
+          "Isabella Cross",
+          "EHOVE Career Center (Adult Education)"
+        ],
+        [
+          "Kristen Herber",
+          "EHOVE Career Center (Adult Education)"
+        ],
+        [
+          "Aylah Leiby",
+          "Lorain County JVS"
+        ],
+        [
+          "Cora Sexton",
+          "Timken High School"
+        ],
+        [
+          "Mary Lou (Bailey) LaChance",
+          "A-Tech (Ashtabula)"
+        ],
+        [
+          "Kimberly Marcum",
+          "Wayne County Schools Career Center (Adult Education)"
+        ],
+        [
+          "Hanna Bruce",
+          "Heartland Technical"
+        ],
+        [
+          "Aubree Davidson",
+          "EHOVE Career Center (Adult Education)"
+        ],
+        [
+          "Briana Stemen",
+          "Heartland Technical"
+        ],
+        [
+          "Sequoya Drake",
+          "Heartland Technical"
+        ]
+      ],
+      "gallery": "2026",
+      "_participants_note": "From '2026 CTC planning.xlsx' Contestants tab: 23 who competed (no-shows excluded). Blog said 29. 4th place Alexis Hunt also received $750+$750 tools ('was 2nd') — not shown; 2026 actual awarded was $6,000 incl. 4th."
     },
     {
       "year": 2025,
@@ -321,11 +436,11 @@
         ],
         [
           "Bianca Robinson",
-          "Akron Beauty"
+          "Gerber Akron Beauty School"
         ],
         [
           "Natalie Tran",
-          "Akron Beauty"
+          "Gerber Akron Beauty School"
         ]
       ],
       "gallery": "",
