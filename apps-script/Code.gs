@@ -34,9 +34,12 @@ function doPost(e) {
     MailApp.sendEmail({
       to: p.email,
       name: 'Create the Cut — Great Clips Franchisees of Cleveland-Akron-Canton',
-      subject: "You're on the Create the Cut 2027 list!",
-      body: 'Hi ' + p.first_name + ',\n\nThanks for your interest in Create the Cut 2027! ' +
-        "We'll email you as soon as the date, venue and nomination details are announced.\n\n" +
+      subject: "Thanks for your interest in Create the Cut 2027",
+      body: 'Hi ' + p.first_name + ',\n\nThanks for your interest in Create the Cut 2027 (Sunday, March 14, 2027, Don Umerley Civic Center, Rocky River)! ' +
+        (p.role === 'instructor'
+          ? "We'll email you the nomination form and event details as soon as nominations open.\n\n"
+          : "Please note: this interest form is not an entry. All competitors must be nominated by their cosmetology school instructor, " +
+            "so be sure to let your instructor know you want to compete. We'll keep you posted as details are announced.\n\n") +
         '— The Great Clips franchisees of Cleveland-Akron-Canton'
     });
   }

@@ -92,15 +92,18 @@
     // Apps Script web apps don't send CORS headers; no-cors posts still land in the sheet.
     fetch(endpoint, { method: 'POST', mode: 'no-cors', body: data })
       .then(function () {
+        var role = (form.querySelector('input[name=role]:checked') || {}).value;
         form.reset(); syncRole();
         msg.className = 'form-msg ok';
-        msg.textContent = 'You’re on the list! We’ll email you as soon as 2027 details and nominations open.';
+        msg.textContent = role === 'instructor'
+          ? 'Thanks! We’ll email you the nomination form and details as soon as nominations open.'
+          : 'Thanks — your interest is noted! Remember, this is not an entry: ask your cosmetology instructor to nominate you once nominations open.';
         msg.scrollIntoView({ block: 'center', behavior: 'smooth' });
       })
       .catch(function () {
         msg.className = 'form-msg err';
         msg.textContent = 'Something went wrong sending your info. Please check your connection and try again.';
       })
-      .finally(function () { b.disabled = false; b.textContent = 'Count me in'; });
+      .finally(function () { b.disabled = false; b.textContent = 'Submit my interest'; });
   });
 })();

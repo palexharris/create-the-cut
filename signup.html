@@ -13,7 +13,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="assets/css/site.css?v=1792536907">
+<link rel="stylesheet" href="assets/css/site.css?v=1792579326">
 </head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
@@ -27,10 +27,14 @@
 <main id="main">
 
 <section class="page-hero"><svg class="tri" viewBox="0 0 400 300" preserveAspectRatio="xMaxYMid slice" aria-hidden="true"><polygon points="160,0 400,0 400,300" fill="#048667" opacity=".55"/><polygon points="250,0 400,0 400,190" fill="#089f45" opacity=".55"/><polygon points="330,0 400,0 400,90" fill="#9acb3a" opacity=".8"/></svg><div class="wrap"><span class="eyebrow">Create the Cut 2027</span><h1>Join the interest list</h1>
-<p>For students and instructors: tell us who you are and we’ll email you the moment nominations, dates and details are announced.</p></div></section>
+<p><b>Students:</b> this form lets us know you’re interested — it is not an entry. All competitors must be nominated by their cosmetology school instructor.<br><b>Instructors:</b> sign up to receive the nomination form and event details.</p></div></section>
 <section class="band-gray"><div class="wrap form-wrap">
 <form class="signup" data-endpoint="">
-  <fieldset><legend>I am a…</legend><div class="roles"><label><input type="radio" name="role" value="student" required><span>Student<small>I want to compete</small></span></label><label><input type="radio" name="role" value="instructor" required><span>Instructor / school<small>I’ll nominate students</small></span></label></div></fieldset>
+  <div class="callout"><b>Heads up:</b> this is an interest form, not a competition entry. <b>All nominations must come from cosmetology school instructors.</b></div>
+  <fieldset><legend>I am a…</legend><div class="roles"><label><input type="radio" name="role" value="student" required><span>Student<small>I’m interested in competing</small></span></label><label><input type="radio" name="role" value="instructor" required><span>Instructor / school<small>I’ll nominate my students</small></span></label></div>
+    <p class="role-only role-note" data-roles="student">Submitting this form <b>does not enter you</b> in Create the Cut. It tells us you’re interested so we can keep you posted. To compete, ask your cosmetology instructor to nominate you once nominations open.</p>
+    <p class="role-only role-note" data-roles="instructor">We’ll email you the official nomination form as soon as nominations open. Only instructors can nominate students.</p>
+  </fieldset>
   <fieldset><legend>About you</legend>
   <div class="fields">
     <div class="field"><label for="f-first">First name</label><input id="f-first" name="first_name" type="text" autocomplete="given-name" required></div>
@@ -51,14 +55,14 @@
   </div></fieldset>
   <label class="check"><input type="checkbox" name="consent" value="yes" required><span>Yes, email me (and text me if I gave a phone number) about Create the Cut. I can opt out anytime.</span></label>
   <input class="hp" type="text" name="website" tabindex="-1" autocomplete="off" aria-hidden="true">
-  <div style="margin-top:22px"><button class="btn btn-jade" type="submit">Count me in</button></div>
+  <div style="margin-top:22px"><button class="btn btn-jade" type="submit">Submit my interest</button></div>
   <div class="form-msg" role="status" aria-live="polite"></div>
 </form>
 <aside class="aside-card">
   <h3>Why compete?</h3>
   <div class="big">$1,000</div><p style="color:#dcebe6">top student prize — take it as cash or an equal-value tool package, plus a matching $1,000 for your school</p>
   <ul><li>Show your skills in front of judges, family and media</li><li>Meet local salon owners who are hiring</li><li>Free to compete</li></ul>
-  <p style="color:#dcebe6;font-size:.88rem;margin:0">This interest form is not your official entry — competitors are nominated by their instructors. We’ll send next steps by email.</p>
+  <p style="color:#fff;font-size:.92rem;margin:0;padding:14px;border-radius:10px;background:rgba(255,255,255,.1)"><b>Students:</b> this form is not an entry. All competitors must be nominated by their cosmetology school instructor.</p>
 </aside>
 </div></section>
 
@@ -91,6 +95,6 @@
   <button class="x" aria-label="Close">×</button><button class="prev" aria-label="Previous photo">‹</button>
   <img alt=""><button class="next" aria-label="Next photo">›</button>
 </div>
-<script src="assets/js/site.js?v=1792536907"></script>
+<script src="assets/js/site.js?v=1792579326"></script>
 </body>
 </html>

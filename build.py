@@ -139,7 +139,7 @@ def stats_band():
 </div></section>'''
 
 
-def cta_band(h='Ready to show what you can do?', p='Get on the list for Create the Cut 2027 — we’ll email nominations, dates and details the moment they’re announced.'):
+def cta_band(h='Ready to show what you can do?', p='Students: let us know you’re interested. Instructors: sign up to receive the nomination form — all competitors are nominated by their cosmetology school instructors.'):
     return f'''<section class="cta-band">{TRI}<div class="wrap" style="position:relative;z-index:1">
   <h2>{h}</h2><p>{p}</p>
   <div class="btn-row"><a class="btn btn-lime" href="signup.html">Sign up for 2027</a><a class="btn btn-ghost" href="event.html">Event details</a></div>
@@ -155,7 +155,7 @@ def save_the_date():
     <h2>{e(EV["headline_date"])}</h2>
     <p style="font-size:1.15rem;margin-bottom:4px"><b>{e(EV["venue"])}</b></p>
     <p><a href="{e(EV["maps_url"])}" target="_blank" rel="noopener">{e(EV["venue_detail"])}</a></p>
-    <p>Instructors: start thinking about who you’ll nominate. Students: tell your instructor you want in. Start time and nomination details are coming soon.</p>
+    <p>Instructors: start thinking about who you’ll nominate. Students: tell your instructor you want in — all nominations come from instructors. Start time and nomination details are coming soon.</p>
     <div class="btn-row"><a class="btn btn-jade" href="{EV["ics"]}" download>Add to calendar</a><a class="btn btn-outline" href="{EV["save_the_date_pdf"]}" download>Download the flyer</a></div>
   </div>
 </div></section>'''
@@ -200,8 +200,8 @@ def build_home():
 <section><div class="wrap">
   <div class="section-head"><span class="eyebrow" style="color:var(--jade)">Get involved</span><h2>There’s a spot for everyone.</h2></div>
   <div class="grid g3">
-    <div class="card">{icon("shears")}<h3>Students</h3><p>Enrolled in (or recently graduated from) a Northeast Ohio cosmetology or barbering program? Join the interest list and ask your instructor to nominate you.</p><a href="signup.html?role=student">Sign up as a student →</a></div>
-    <div class="card">{icon("trophy")}<h3>Instructors &amp; schools</h3><p>Nominate your standout students and put your program on the board. Every winning school receives a matching gift.</p><a href="signup.html?role=instructor">Sign up your program →</a></div>
+    <div class="card">{icon("shears")}<h3>Students</h3><p>Enrolled in (or recently graduated from) a Northeast Ohio cosmetology or barbering program? Submit your interest, then ask your instructor to nominate you — only instructors can enter students.</p><a href="signup.html?role=student">Submit student interest →</a></div>
+    <div class="card">{icon("trophy")}<h3>Instructors &amp; schools</h3><p>All competitors are nominated by their instructors. Sign up to receive the nomination form, then put your program on the board. Every winning school receives a matching gift.</p><a href="signup.html?role=instructor">Sign up your program →</a></div>
     <div class="card">{icon("party")}<h3>Family &amp; fans</h3><p>Come cheer! Create the Cut is a high-energy afternoon and spectators are welcome — no sign-up needed.</p><a href="event.html">See event details →</a></div>
   </div>
 </div></section>
@@ -256,8 +256,8 @@ def build_event():
     <p>Competitors work on mannequins and complete a series of timed haircuts in sequence — a <b>long</b> cut, a <b>medium</b> cut and a <b>short</b> cut — with roughly 15–20 minutes for each. Judges circulate the floor while students cut, then assess the finished results to assign scores.</p>
     <p>The highest combined scores take 1st, 2nd and 3rd place, and winners are announced and presented with their checks at the end of the afternoon.</p>
     <div class="steps" style="margin-top:26px">
-      <div class="step"><h3>Get on the list</h3><p>Students and instructors sign up for updates on this site.</p></div>
-      <div class="step"><h3>Instructors nominate</h3><p>Each program nominates its top students (past events allowed up to two per program).</p></div>
+      <div class="step"><h3>Students submit interest</h3><p>Students let us know they’re interested on this site — this is not an entry. Instructors sign up to receive the nomination form.</p></div>
+      <div class="step"><h3>Instructors nominate</h3><p><b>All competitors must be nominated by their cosmetology school instructor</b> — students can’t enter themselves. Past events allowed up to two nominees per program.</p></div>
       <div class="step"><h3>Confirm &amp; sign the release</h3><p>Nominees complete the Affidavit of Eligibility &amp; Release (parent/guardian signs if under 18).</p></div>
       <div class="step"><h3>Compete on event day</h3><p>Check in, set up your station and cut against the clock.</p></div>
       <div class="step"><h3>Awards</h3><p>Top three choose a cash prize or an equal-value tool package — plus matching gifts for their schools.</p></div>
@@ -289,7 +289,7 @@ def build_event():
   <div class="card">{icon("checkmark")}<h3>Eligibility</h3>
     <ul>
       <li>Currently enrolled in, or recently graduated from, a cosmetology or barbering program in Northeast Ohio.</li>
-      <li>Nominated by an instructor at your school.</li>
+      <li>Nominated by a cosmetology instructor at your school — students cannot nominate themselves.</li>
       <li>Signed Affidavit of Eligibility &amp; Release — a parent or guardian also signs if you’re under 18.</li>
     </ul></div>
   <div class="card">{icon("chat")}<h3>Spectators &amp; media</h3>
@@ -355,7 +355,7 @@ def build_past():
   {'<div class="divider"></div>'.join(blocks)}
 </div></section>
 {stats_band()}
-{cta_band('Your name could be next.', 'Join the Create the Cut 2027 interest list and ask your instructor about nominations.')}
+{cta_band('Your name could be next.', 'Submit your interest, then ask your cosmetology instructor to nominate you.')}
 '''
     page('past-events.html', f'Past Winners | {SITE_NAME}',
          'Create the Cut winners, their schools and every student competitor from past Northeast Ohio competitions.', body)
@@ -422,7 +422,8 @@ FAQ = [
     ]),
     ('Competing', [
         ('Who is eligible?', 'Students currently enrolled in — or recently graduated from — a cosmetology or barbering program in Northeast Ohio, who are nominated by an instructor at their school.'),
-        ('How do I enter?', 'Competitors are nominated by their instructors. Fill out the <a href="signup.html?role=student">student interest form</a> and let your instructor know you want to compete. Instructors can sign up <a href="signup.html?role=instructor">here</a>.'),
+        ('How do I enter?', 'Students can’t enter themselves — <b>all nominations must come from cosmetology school instructors</b>. Fill out the <a href="signup.html?role=student">student interest form</a> so we know you’re interested, then let your instructor know you want to compete. Instructors can sign up <a href="signup.html?role=instructor">here</a> to receive the nomination form.'),
+        ('Does the student interest form enter me in the competition?', 'No. The student form only tells us you’re interested so we can keep you posted. To compete, you must be nominated by your cosmetology school instructor.'),
         ('How many students can each school send?', 'In past years each program could nominate up to two students. The 2027 limit will be shared when nominations open.'),
         ('Does it cost anything to compete?', 'No — there is no entry fee.'),
         ('What will I have to cut?', 'Competitors work on mannequins and complete timed haircuts in sequence — a long cut, a medium cut and a short cut — with roughly 15–20 minutes for each.'),
@@ -436,7 +437,7 @@ FAQ = [
         ('How much has been awarded so far?', f'More than {money(AWARDED)} has gone to student winners and their schools across recent competitions — all funded by local Great Clips franchisees.'),
     ]),
     ('Schools & more', [
-        ('I’m an instructor. How do I get my program involved?', 'Sign up on the <a href="signup.html?role=instructor">interest form</a> and we’ll send nomination details as soon as they’re available.'),
+        ('I’m an instructor. How do I get my program involved?', 'Sign up on the <a href="signup.html?role=instructor">interest form</a> and we’ll email you the nomination form as soon as nominations open. Nominations are accepted from instructors only.'),
         ('Will there be photos and video?', 'Yes. The event is professionally photographed and filmed, and local media have covered past competitions. See the <a href="gallery.html">gallery</a> and <a href="news.html">news</a> pages.'),
         ('Does competing lead to a job at Great Clips?', 'There’s no obligation, but many franchisees are hiring and love meeting new talent. Explore openings at <a href="https://jobs.greatclips.com" target="_blank" rel="noopener">jobs.greatclips.com</a>.'),
     ]),
@@ -460,14 +461,18 @@ def build_faq():
 # ---------------------------------------------------------------- sign-up
 def build_signup():
     endpoint = S.get('form_endpoint', '')
-    roles = [('student', 'Student', 'I want to compete'), ('instructor', 'Instructor / school', 'I’ll nominate students')]
+    roles = [('student', 'Student', 'I’m interested in competing'), ('instructor', 'Instructor / school', 'I’ll nominate my students')]
     role_html = ''.join(f'<label><input type="radio" name="role" value="{v}" required><span>{t}<small>{s}</small></span></label>' for v, t, s in roles)
     body = f'''
 <section class="page-hero">{TRI}<div class="wrap"><span class="eyebrow">Create the Cut 2027</span><h1>Join the interest list</h1>
-<p>For students and instructors: tell us who you are and we’ll email you the moment nominations, dates and details are announced.</p></div></section>
+<p><b>Students:</b> this form lets us know you’re interested — it is not an entry. All competitors must be nominated by their cosmetology school instructor.<br><b>Instructors:</b> sign up to receive the nomination form and event details.</p></div></section>
 <section class="band-gray"><div class="wrap form-wrap">
 <form class="signup" data-endpoint="{e(endpoint)}">
-  <fieldset><legend>I am a…</legend><div class="roles">{role_html}</div></fieldset>
+  <div class="callout"><b>Heads up:</b> this is an interest form, not a competition entry. <b>All nominations must come from cosmetology school instructors.</b></div>
+  <fieldset><legend>I am a…</legend><div class="roles">{role_html}</div>
+    <p class="role-only role-note" data-roles="student">Submitting this form <b>does not enter you</b> in Create the Cut. It tells us you’re interested so we can keep you posted. To compete, ask your cosmetology instructor to nominate you once nominations open.</p>
+    <p class="role-only role-note" data-roles="instructor">We’ll email you the official nomination form as soon as nominations open. Only instructors can nominate students.</p>
+  </fieldset>
   <fieldset><legend>About you</legend>
   <div class="fields">
     <div class="field"><label for="f-first">First name</label><input id="f-first" name="first_name" type="text" autocomplete="given-name" required></div>
@@ -488,14 +493,14 @@ def build_signup():
   </div></fieldset>
   <label class="check"><input type="checkbox" name="consent" value="yes" required><span>Yes, email me (and text me if I gave a phone number) about Create the Cut. I can opt out anytime.</span></label>
   <input class="hp" type="text" name="website" tabindex="-1" autocomplete="off" aria-hidden="true">
-  <div style="margin-top:22px"><button class="btn btn-jade" type="submit">Count me in</button></div>
+  <div style="margin-top:22px"><button class="btn btn-jade" type="submit">Submit my interest</button></div>
   <div class="form-msg" role="status" aria-live="polite"></div>
 </form>
 <aside class="aside-card">
   <h3>Why compete?</h3>
   <div class="big">{money(PRIZE_TOP)}</div><p style="color:#dcebe6">top student prize — take it as cash or an equal-value tool package, plus a matching {money(S["prizes"][0]["school"])} for your school</p>
   <ul><li>Show your skills in front of judges, family and media</li><li>Meet local salon owners who are hiring</li><li>Free to compete</li></ul>
-  <p style="color:#dcebe6;font-size:.88rem;margin:0">This interest form is not your official entry — competitors are nominated by their instructors. We’ll send next steps by email.</p>
+  <p style="color:#fff;font-size:.92rem;margin:0;padding:14px;border-radius:10px;background:rgba(255,255,255,.1)"><b>Students:</b> this form is not an entry. All competitors must be nominated by their cosmetology school instructor.</p>
 </aside>
 </div></section>
 '''
