@@ -228,16 +228,108 @@
     {
       "year": 2024,
       "date": "Sunday, March 3, 2024",
-      "venue": "",
-      "city": "Northeast Ohio",
-      "competitors": null,
+      "venue": "Solon Community Center",
+      "city": "Solon, OH",
+      "competitors": 18,
       "judges": null,
-      "summary": "The debut. Great Clips franchisees across Cleveland, Akron and Canton teamed up to launch a hands-on haircutting competition for the region's cosmetology students — and a new tradition was born.",
+      "summary": "The debut. Great Clips franchisees across Cleveland, Akron and Canton teamed up to launch a hands-on haircutting competition for the region’s cosmetology and barbering students. Eighteen nominated students from eleven programs took on two judged mannequin cuts, and the top three each took home a professional tool kit plus a prize for their school — and a new tradition was born.",
       "prize_total": null,
-      "winners": [],
-      "_todo": "Add 2024 venue, competitor count, prize total, winners and participants.",
-      "participants": [],
-      "gallery": ""
+      "winners": [
+        {
+          "place": "1st",
+          "name": "John Paul Kish",
+          "school": "A-Tech (Ashtabula)",
+          "prize_text": "Professional tool kit + prize to the school"
+        },
+        {
+          "place": "2nd",
+          "name": "Tara Lesiak",
+          "school": "Auburn Career Center",
+          "prize_text": "Professional tool kit + prize to the school"
+        },
+        {
+          "place": "3rd",
+          "name": "Mayli Austin",
+          "school": "EHOVE Career Center (Adult Education)",
+          "prize_text": "Professional tool kit + prize to the school"
+        }
+      ],
+      "participants": [
+        [
+          "John Paul Kish",
+          "A-Tech (Ashtabula)"
+        ],
+        [
+          "Tara Lesiak",
+          "Auburn Career Center"
+        ],
+        [
+          "Mayli Austin",
+          "EHOVE Career Center (Adult Education)"
+        ],
+        [
+          "Katherine Pfeuffer",
+          "Lorain County JVS"
+        ],
+        [
+          "Delaney Friscone",
+          "Lorain County JVS"
+        ],
+        [
+          "Macee Butcher",
+          "Wayne County Schools Career Center (Adult Education)"
+        ],
+        [
+          "Trina Johnson",
+          "Buckeye Adult Education"
+        ],
+        [
+          "Harmony Lynn",
+          "Buckeye Adult Education"
+        ],
+        [
+          "Sophia Suskowicz",
+          "Auburn Career Center"
+        ],
+        [
+          "Trinity Ross",
+          "Buckeye High School"
+        ],
+        [
+          "Sophia Smith",
+          "Glen Oak High School"
+        ],
+        [
+          "Katie Ranalli",
+          "Glen Oak High School"
+        ],
+        [
+          "Candice Moore",
+          "Northern Institute of Cosmetology"
+        ],
+        [
+          "Brenda Alamo",
+          "Northern Institute of Cosmetology"
+        ],
+        [
+          "Mel Aviles",
+          "All-State Barber College"
+        ],
+        [
+          "DionTae Johnson",
+          "All-State Barber College"
+        ],
+        [
+          "Bianca Robinson",
+          "Akron Beauty"
+        ],
+        [
+          "Natalie Tran",
+          "Akron Beauty"
+        ]
+      ],
+      "gallery": "",
+      "_participants_note": "From '2024 Cleveland Create the cut competition.xlsx' Constestant tab. 'Sophia Smith' and 'Sophie m Smith' (Glen Oak, both #11) merged as one; National Beauty 'TBD' omitted. Prize $ amounts unknown (planning tab draft said $6000 but unconfirmed)."
     }
   ],
   "videos": [

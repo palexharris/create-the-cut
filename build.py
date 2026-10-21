@@ -131,11 +131,11 @@ def stats_band():
   <p>Every dollar is funded by local Great Clips franchisees — going straight to student winners and matched, dollar for dollar, to the schools that trained them — as cash or professional tools.</p></div>
   <div class="grid g4">
     <div class="stat"><b>{money(AWARDED)}+</b><span>awarded to students &amp; schools</span></div>
-    <div class="stat"><b>{money(PRIZE_YEAR)}</b><span>in prizes every year</span></div>
+    <div class="stat"><b>{money(PRIZE_YEAR)}</b><span>in prizes up for grabs in 2027</span></div>
     <div class="stat"><b>{COMPETITORS}+</b><span>student competitors</span></div>
     <div class="stat"><b>{len(SCHOOLS)}+</b><span>cosmetology &amp; barber programs</span></div>
   </div>
-  <p class="note">Totals reflect the 2025 and 2026 competitions; 2024 debut figures will be added.</p>
+  <p class="note">Dollar totals reflect the 2025 and 2026 competitions; 2024 winners received professional tool kits plus prizes for their schools.</p>
 </div></section>'''
 
 
@@ -323,6 +323,7 @@ def build_past():
                 + (f'<img src="{w["photo"]}" data-full="{w["photo"]}" alt="{e(w["name"])}, {w["place"]} place {y["year"]}" loading="lazy" style="border-radius:10px;margin:-6px -6px 16px;width:calc(100% + 12px);aspect-ratio:4/3;object-fit:cover;cursor:zoom-in">' if w.get('photo') else '')
                 + f'<div class="medal">{w["place"]}</div><div class="nm">{e(w["name"])}</div><div class="sc">{e(w["school"])}</div>'
                 + (f'<div class="amt"><b>{money(w["amount"])}</b> to the student + <b>{money(w["amount"])}</b> to the school</div>' if w.get('amount') else '')
+                + (f'<div class="amt">{e(w["prize_text"])}</div>' if w.get('prize_text') else '')
                 + '</div>' for i, w in enumerate(y['winners'], 1)) + '</div>'
         else:
             pod = f'<div class="pending"><b>{y["year"]} winners</b> — names and schools coming soon.</div>'
