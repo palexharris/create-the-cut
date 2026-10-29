@@ -49,8 +49,8 @@
       "city": "Rocky River, OH",
       "competitors": 23,
       "judges": null,
-      "summary": "Year three moved to the Don Umerley Civic Center in Rocky River. Twenty-three instructor-nominated students from twelve programs took on two timed rounds — a haircut and style, then a second haircut — in front of judges, educators, families and FOX 8 Cleveland. Winners chose their prize: cash or a professional tool package of equal value.",
-      "prize_total": 4500,
+      "summary": "Year three moved to the Don Umerley Civic Center in Rocky River. Twenty-three instructor-nominated students from twelve programs took on two timed rounds — a haircut and style, then a second cut of their choice — in front of judges, educators, families and FOX 8 Cleveland. Winners chose their prize: cash or a professional tool package of equal value.",
+      "prize_total": 6000,
       "winners": [
         {
           "place": "1st",
@@ -72,6 +72,12 @@
           "school": "Cuyahoga Valley Career Center",
           "amount": 500,
           "choice": "tools"
+        },
+        {
+          "place": "4th",
+          "name": "Alexis Hunt",
+          "school": "Timken High School",
+          "prize_text": "Tool package + tools for the school"
         }
       ],
       "participants": [
@@ -169,16 +175,16 @@
         ]
       ],
       "gallery": "2026",
-      "_participants_note": "From '2026 CTC planning.xlsx' Contestants tab: 23 who competed (no-shows excluded). Blog said 29. 4th place Alexis Hunt also received $750+$750 tools ('was 2nd') — not shown; 2026 actual awarded was $6,000 incl. 4th."
+      "_participants_note": "From '2026 CTC planning.xlsx' Contestants tab: 23 who competed (no-shows excluded). Alex confirmed 23 and showing 4th place."
     },
     {
       "year": 2025,
       "date": "Sunday, March 9, 2025",
       "venue": "Solon Community Center",
       "city": "Solon, OH",
-      "competitors": 31,
+      "competitors": 33,
       "judges": null,
-      "summary": "Thirty-one students from public and private cosmetology and barbering programs across Northeast Ohio packed the Solon Community Center. Each program could send two students, and the top three walked away with oversized checks — and matching gifts for their schools.",
+      "summary": "Thirty-three students from public and private cosmetology and barbering programs across Northeast Ohio packed the Solon Community Center. Each program could send two students, and the top three walked away with oversized checks — and matching gifts for their schools.",
       "prize_total": 4500,
       "winners": [
         {
@@ -337,7 +343,7 @@
           "Inner State Beauty School"
         ]
       ],
-      "_participants_note": "From the 2025 sign-up list (33 names). Fox 8 reported 31 competed — confirm before publishing.",
+      "_participants_note": "Alex: use the 2025 sign-up list (33).",
       "gallery": "2025"
     },
     {
@@ -347,26 +353,26 @@
       "city": "Solon, OH",
       "competitors": 18,
       "judges": null,
-      "summary": "The debut. Great Clips franchisees across Cleveland, Akron and Canton teamed up to launch a hands-on haircutting competition for the region’s cosmetology and barbering students. Eighteen nominated students from eleven programs took on two judged mannequin cuts, and the top three each took home a professional tool kit plus a prize for their school — and a new tradition was born.",
-      "prize_total": null,
+      "summary": "The debut. Great Clips franchisees across Cleveland, Akron and Canton teamed up to launch a hands-on haircutting competition for the region’s cosmetology and barbering students. Eighteen nominated students from eleven programs took on two judged mannequin cuts, and the top three earned prize packages — professional tool kits plus gifts for their schools. A new tradition was born.",
+      "prize_total": 5500,
       "winners": [
         {
           "place": "1st",
           "name": "John Paul Kish",
           "school": "A-Tech (Ashtabula)",
-          "prize_text": "Professional tool kit + prize to the school"
+          "prize_text": "$3,000 prize package: tool kit + gift to the school"
         },
         {
           "place": "2nd",
           "name": "Tara Lesiak",
           "school": "Auburn Career Center",
-          "prize_text": "Professional tool kit + prize to the school"
+          "prize_text": "$1,500 prize package: tool kit + gift to the school"
         },
         {
           "place": "3rd",
           "name": "Mayli Austin",
           "school": "EHOVE Career Center (Adult Education)",
-          "prize_text": "Professional tool kit + prize to the school"
+          "prize_text": "$1,000 prize package: tool kit + gift to the school"
         }
       ],
       "participants": [
@@ -396,11 +402,11 @@
         ],
         [
           "Trina Johnson",
-          "Buckeye Adult Education"
+          "Buckeye Adult Ed"
         ],
         [
           "Harmony Lynn",
-          "Buckeye Adult Education"
+          "Buckeye Adult Ed"
         ],
         [
           "Sophia Suskowicz",
@@ -444,7 +450,7 @@
         ]
       ],
       "gallery": "",
-      "_participants_note": "From '2024 Cleveland Create the cut competition.xlsx' Constestant tab. 'Sophia Smith' and 'Sophie m Smith' (Glen Oak, both #11) merged as one; National Beauty 'TBD' omitted. Prize $ amounts unknown (planning tab draft said $6000 but unconfirmed)."
+      "_participants_note": "2024 prizes per planning tab: 1st $3,000 / 2nd $1,500 / 3rd $1,000 ('2@$500' read as the 3rd-place split); total shown $5,500."
     }
   ],
   "videos": [

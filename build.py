@@ -135,7 +135,7 @@ def stats_band():
     <div class="stat"><b>{COMPETITORS}+</b><span>student competitors</span></div>
     <div class="stat"><b>{len(SCHOOLS)}+</b><span>cosmetology &amp; barber programs</span></div>
   </div>
-  <p class="note">Dollar totals reflect the 2025 and 2026 competitions; 2024 winners received professional tool kits plus prizes for their schools.</p>
+  <p class="note">Includes student prizes and matching school gifts awarded 2024–2026.</p>
 </div></section>'''
 
 
@@ -182,7 +182,7 @@ def build_home():
   <div>
     <span class="eyebrow" style="color:var(--jade)">What is Create the Cut?</span>
     <h2>Two cuts. One clock. Real stakes.</h2>
-    <p>Create the Cut gives the region’s most promising stylists a stage. Instructors nominate their top students, who then compete on mannequins through two timed rounds — a haircut and style, then a second haircut — while a panel of judges scores their technique and finished looks.</p>
+    <p>Create the Cut gives the region’s most promising stylists a stage. Instructors nominate their top students, who then compete on mannequins through two timed rounds — a shear cut and style, then a fade of their choice — while a panel of judges scores their technique and finished looks.</p>
     <p>Family, friends and instructors pack the room to cheer them on, and the top three walk away with oversized checks, bragging rights and a head start on their careers.</p>
     <a class="btn btn-jade" href="event.html">How it works</a>
   </div>
@@ -202,7 +202,7 @@ def build_home():
   <div class="grid g3">
     <div class="card">{icon("shears")}<h3>Students</h3><p>Enrolled in (or recently graduated from) a Northeast Ohio cosmetology or barbering program? Submit your interest, then ask your instructor to nominate you — only instructors can enter students.</p><a href="signup.html?role=student">Submit student interest →</a></div>
     <div class="card">{icon("trophy")}<h3>Instructors &amp; schools</h3><p>All competitors are nominated by their instructors. Sign up to receive the nomination form, then put your program on the board. Every winning school receives a matching gift.</p><a href="signup.html?role=instructor">Sign up your program →</a></div>
-    <div class="card">{icon("party")}<h3>Family &amp; fans</h3><p>Come cheer! Create the Cut is a high-energy afternoon and spectators are welcome — no sign-up needed, and light refreshments are provided.</p><a href="event.html">See event details →</a></div>
+    <div class="card">{icon("party")}<h3>Family &amp; fans</h3><p>Come cheer! Create the Cut is a high-energy afternoon and spectators are welcome — no sign-up needed. Light refreshments are provided, plus trivia and giveaways for the crowd.</p><a href="event.html">See event details →</a></div>
   </div>
 </div></section>
 
@@ -253,11 +253,11 @@ def build_event():
   <div>
     <span class="eyebrow" style="color:var(--jade)">The competition</span>
     <h2>How it works</h2>
-    <p>Competitors work on mannequins through two timed rounds of about 40 minutes each — <b>Round 1: a haircut and style</b>, then <b>Round 2: a second haircut</b>. Judges score each round as soon as the clock stops.</p>
+    <p>Competitors work on mannequins through two timed rounds of about 40 minutes each — <b>Round 1: a shear cut and style</b>, then <b>Round 2: a fade of the competitor’s choice</b>. Judges score each round as soon as the clock stops.</p>
     <p>The highest combined scores take 1st, 2nd and 3rd place, and winners are announced and presented with their checks at the end of the afternoon.</p>
     <div class="steps" style="margin-top:26px">
       <div class="step"><h3>Students submit interest</h3><p>Students let us know they’re interested on this site — this is not an entry. Instructors sign up to receive the nomination form.</p></div>
-      <div class="step"><h3>Instructors nominate</h3><p><b>All competitors must be nominated by their cosmetology school instructor</b> — students can’t enter themselves. Past events allowed up to two nominees per program.</p></div>
+      <div class="step"><h3>Instructors nominate</h3><p><b>All competitors must be nominated by their cosmetology school instructor</b> — students can’t enter themselves. Each program may nominate up to two students.</p></div>
       <div class="step"><h3>Confirm &amp; sign the release</h3><p>Nominees complete the Affidavit of Eligibility &amp; Release (parent/guardian signs if under 18).</p></div>
       <div class="step"><h3>Compete on event day</h3><p>Check in, set up your station and cut against the clock — two rounds, about 40 minutes each.</p></div>
       <div class="step"><h3>Awards</h3><p>Top three choose a cash prize or an equal-value tool package — plus matching gifts for their schools.</p></div>
@@ -272,8 +272,8 @@ def build_event():
         <li><b>12:00 p.m.</b><span>Competitor &amp; educator check-in, swag bags, station setup</span></li>
         <li><b>12:30 p.m.</b><span>Competitor orientation</span></li>
         <li><b>1:00 p.m.</b><span>Welcome from the emcees</span></li>
-        <li><b>1:10 p.m.</b><span>Round 1: haircut &amp; style (40 min), then judging</span></li>
-        <li><b>2:15 p.m.</b><span>Round 2: haircut (40 min)</span></li>
+        <li><b>1:10 p.m.</b><span>Round 1: shear cut &amp; style (40 min), then judging</span></li>
+        <li><b>2:15 p.m.</b><span>Round 2: fade of the competitor’s choice (40 min)</span></li>
         <li><b>3:00 p.m.</b><span>Final judging</span></li>
         <li><b>3:20 p.m.</b><span>Winners announced &amp; prizes presented</span></li>
       </ul>
@@ -295,7 +295,7 @@ def build_event():
       <li>Signed Affidavit of Eligibility &amp; Release — a parent or guardian also signs if you’re under 18.</li>
     </ul></div>
   <div class="card">{icon("chat")}<h3>Spectators &amp; media</h3>
-    <p>Family, friends, instructors and classmates are welcome to come cheer — the energy in the room is a big part of the day. No sign-up needed, and light refreshments are provided.</p>
+    <p>Family, friends, instructors and classmates are welcome to come cheer — the energy in the room is a big part of the day. No sign-up needed. Light refreshments are provided, and the emcees keep the crowd busy with trivia and giveaways.</p>
     <p>The event is photographed and filmed, and local media including FOX 8 Cleveland have covered past competitions.</p></div>
 </div></section>
 
@@ -350,11 +350,30 @@ def build_past():
   {pod}{roster}{strip}
 </div>''')
     ynav = ''.join(f'<a href="#y{y["year"]}">{y["year"]}</a>' for y in YEARS)
+    # competitors who came back for another year
+    seen = {}
+    for y in sorted(YEARS, key=lambda y: y['year']):
+        places = {w['name'].lower(): w['place'] for w in y['winners']}
+        for n, sc in y['participants']:
+            seen.setdefault(n.lower(), {'name': n, 'school': sc, 'years': []})['years'].append((y['year'], places.get(n.lower())))
+    back = [v for v in seen.values() if len(v['years']) > 1]
+    returning = ''
+    if back:
+        cards = ''.join(
+            f'<div class="card"><b>{e(v["name"])}</b><p style="color:var(--muted);font-size:.9rem;margin:2px 0 10px">{e(v["school"])}</p>'
+            + ' → '.join(f'<span class="tag">{yr}{" · " + pl + " place" if pl else " · competed"}</span>' for yr, pl in v['years'])
+            + '</div>' for v in sorted(back, key=lambda v: v['name'].split()[-1]))
+        returning = f'''<div class="returning" style="margin:34px 0 10px">
+  <h3>Returning competitors</h3>
+  <p style="color:var(--muted)">Some of the region’s best came back for another shot — and climbed the podium.</p>
+  <div class="grid g3">{cards}</div>
+</div>'''
     body = f'''
 <section class="page-hero">{TRI}<div class="wrap"><span class="eyebrow">Hall of fame</span><h1>Past winners &amp; competitors</h1>
 <p>Every year, the region’s best student stylists — and the schools behind them — earn their place here.</p></div></section>
 <section><div class="wrap">
   <div class="year-nav">{ynav}</div>
+  {returning}
   {'<div class="divider"></div>'.join(blocks)}
 </div></section>
 {stats_band()}
@@ -421,15 +440,15 @@ FAQ = [
         ('Who runs it?', f'The independently owned and operated Great Clips salons of {REGION}. Local franchisees and their salon teams plan, staff and fund the entire event.'),
         ('When and where is the 2027 competition?', f'{e(EV["headline_date"])}, at the {e(EV["venue"])}, {e(EV["venue_detail"])}. <a href="{EV["ics"]}" download>Add it to your calendar</a> and <a href="signup.html">join the interest list</a> for nomination details and the start time.'),
         ('How long does it last?', 'Plan on an afternoon. In 2026, check-in opened at noon, the competition started at 1:00 and winners were announced around 3:20.'),
-        ('Can family and friends come watch?', 'Yes! Spectators are welcome — no sign-up needed — and light refreshments are provided. The cheering section is a big part of the fun.'),
+        ('Can family and friends come watch?', 'Yes! Spectators are welcome — no sign-up needed. Light refreshments are provided, and there’s trivia with giveaways for the crowd while competitors cut. The cheering section is a big part of the fun.'),
     ]),
     ('Competing', [
         ('Who is eligible?', 'Students currently enrolled in — or recently graduated from — a cosmetology or barbering program in Northeast Ohio, who are nominated by an instructor at their school.'),
         ('How do I enter?', 'Students can’t enter themselves — <b>all nominations must come from cosmetology school instructors</b>. Fill out the <a href="signup.html?role=student">student interest form</a> so we know you’re interested, then let your instructor know you want to compete. Instructors can sign up <a href="signup.html?role=instructor">here</a> to receive the nomination form.'),
         ('Does the student interest form enter me in the competition?', 'No. The student form only tells us you’re interested so we can keep you posted. To compete, you must be nominated by your cosmetology school instructor.'),
-        ('How many students can each school send?', 'In past years each program could nominate up to two students. The 2027 limit will be shared when nominations open.'),
+        ('How many students can each school send?', 'Each program may nominate up to two students.'),
         ('Does it cost anything to compete?', 'No — there is no entry fee.'),
-        ('What will I have to cut?', 'Competitors work on mannequins through two timed rounds of about 40 minutes each: a haircut and style, then a second haircut.'),
+        ('What will I have to cut?', 'Competitors work on mannequins through two timed rounds of about 40 minutes each: Round 1 is a shear cut and style, and Round 2 is a fade of the competitor’s choice.'),
         ('How is it judged?', 'A panel of judges scores each round right after time is called. Combined scores decide 1st, 2nd and 3rd.'),
         ('What do I need to bring?', 'Confirmed competitors receive a packet with the rules, supply list and check-in details before the event.'),
         ('I’m under 18 — can I still compete?', 'Yes. Every competitor signs an Affidavit of Eligibility & Release, and a parent or guardian also signs if you’re under 18.'),
