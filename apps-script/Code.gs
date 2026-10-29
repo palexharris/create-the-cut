@@ -3,7 +3,7 @@
  * Bound to a Google Sheet; the website POSTs each sign-up here and it lands as a new row.
  * Setup steps: see apps-script/README.md.
  */
-var NOTIFY_EMAIL = '';          // e.g. 'admin@harrisclips.com' — gets an email per sign-up. Blank = off.
+var NOTIFY_EMAIL = 'admin@harrisclips.com';        // e.g. 'admin@harrisclips.com' — gets an email per sign-up. Blank = off.
 var SEND_CONFIRMATION = true;   // emails the person a short "you're on the list" note
 
 var FIELDS = ['role', 'first_name', 'last_name', 'email', 'phone', 'school', 'program_type',
