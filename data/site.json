@@ -49,7 +49,7 @@
       "city": "Rocky River, OH",
       "competitors": 23,
       "judges": null,
-      "summary": "Year three moved to the Don Umerley Civic Center in Rocky River. Twenty-three instructor-nominated students from twelve programs took on two timed rounds — a haircut and style, then a second cut of their choice — in front of judges, educators, families and FOX 8 Cleveland. Winners chose their prize: cash or a professional tool package of equal value.",
+      "summary": "Year three moved to the Don Umerley Civic Center in Rocky River. Twenty-three instructor-nominated students from twelve programs took on two timed rounds — a haircut and style, then a second cut of their choice — in front of judges, educators, families and FOX 8 Cleveland. Winners took their prizes as tuition money or professional tool packages.",
       "prize_total": 6000,
       "winners": [
         {
@@ -57,7 +57,7 @@
           "name": "Alexis Heidinger",
           "school": "Wayne County Schools Career Center (Adult Education)",
           "amount": 1000,
-          "choice": "cash",
+          "choice": "tuition",
           "photo": "assets/img/gallery/2026/ctc2026-17.jpg"
         },
         {
