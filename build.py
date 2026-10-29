@@ -156,7 +156,7 @@ def save_the_date():
     <p style="font-size:1.15rem;margin-bottom:4px"><b>{e(EV["venue"])}</b></p>
     <p><a href="{e(EV["maps_url"])}" target="_blank" rel="noopener">{e(EV["venue_detail"])}</a></p>
     <p>Instructors: start thinking about who you’ll nominate. Students: tell your instructor you want in — all nominations come from instructors. Start time and nomination details are coming soon.</p>
-    <div class="btn-row"><a class="btn btn-jade" href="{EV["ics"]}" download>Add to calendar</a><a class="btn btn-outline" href="{EV["save_the_date_pdf"]}" download>Download the flyer</a></div>
+    <div class="btn-row"><a class="btn btn-jade" href="{EV["ics"]}" download>Add to calendar</a><a class="btn btn-outline" href="assets/ctc-2027-flyer.pdf" download>Download the flyer</a></div>
   </div>
 </div></section>'''
 
@@ -236,7 +236,7 @@ def build_home():
 def build_event():
     body = f'''
 <section class="page-hero">{TRI}<div class="wrap"><span class="eyebrow">Create the Cut 2027</span><h1>Event details</h1>
-<p>Save the date: <b>{e(EV["headline_date"])}</b> at the {e(EV["venue"])} in Rocky River. Everything competitors, instructors and spectators need to know — <a href="signup.html" style="color:var(--lime)">join the list</a> for nomination details.</p></div></section>
+<p>Save the date: <b>{e(EV["headline_date"])}</b> at the {e(EV["venue"])} in Rocky River. Everything competitors, instructors and spectators need to know — <a href="signup.html" style="color:var(--lime)">join the list</a> for nomination details. <a href="assets/ctc-2027-flyer.pdf" style="color:var(--lime)" download>Download the printable flyer</a>.</p></div></section>
 
 <section><div class="wrap">
   <div class="glance">

@@ -1,0 +1,125 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Create the Cut 2027 Flyer</title>
+<style>
+@page { size: 8.5in 11in; margin: 0; }
+:root { --jade:#048667; --lime:#9acb3a; --emerald:#089f45; --dark:#073b3a; --mint:#ddf3c5; --marigold:#f6b221; }
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html, body { width: 8.5in; height: 11in; }
+body { font-family: "Poppins", sans-serif; color: var(--dark); background: #fff; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+.page { width: 8.5in; height: 11in; display: flex; flex-direction: column; overflow: hidden; }
+
+/* top */
+.top, .photo, .bottom, .fans { flex-shrink: 0; }
+.top { background: var(--dark); color: #fff; position: relative; padding: .34in .5in .26in; overflow: hidden; }
+.tri { position: absolute; right: 0; top: 0; height: 100%; width: 3.6in; }
+.lockup img { height: .3in; display: block; }
+.lockup span { display: block; margin-top: .06in; font-size: 8.5pt; font-weight: 600; letter-spacing: .12em; text-transform: uppercase; color: var(--mint); }
+.eyebrow { margin-top: .2in; font-size: 10pt; font-weight: 700; letter-spacing: .16em; text-transform: uppercase; color: var(--lime); position: relative; }
+h1 { white-space: nowrap; font-size: 46pt; line-height: 1.05; font-weight: 800; letter-spacing: -.02em; margin-top: .06in; position: relative; }
+h1 em { font-style: normal; color: var(--lime); }
+.date { position: relative; margin-top: .14in; display: inline-flex; flex-direction: column; background: var(--lime); color: var(--dark); border-radius: .14in; padding: .12in .22in; }
+.date b { font-size: 17pt; font-weight: 800; line-height: 1.15; }
+.date span { font-size: 10.5pt; font-weight: 600; }
+
+/* photo */
+.photo { height: 1.3in; background: url("photo-main.jpg") center 32%/cover no-repeat; position: relative; }
+.photo::after { content: ""; position: absolute; left: 0; right: 0; bottom: 0; height: .14in; background: linear-gradient(90deg, var(--jade) 0 55%, var(--emerald) 55% 80%, var(--lime) 80%); }
+
+/* prizes */
+.body { padding: .24in .5in .2in; flex: 1; display: flex; flex-direction: column; }
+.h2 { font-size: 15pt; font-weight: 800; margin-bottom: .1in; }
+.h2 small { font-size: 10pt; font-weight: 600; color: var(--jade); margin-left: .06in; }
+.prizes { display: grid; grid-template-columns: repeat(3, 1fr); gap: .14in; }
+.prize { border-radius: .12in; border: 1.5px solid #dfe5e3; border-top: .1in solid var(--marigold); padding: .1in .1in .12in; text-align: center; }
+.prize.p2 { border-top-color: #b9c4c2; } .prize.p3 { border-top-color: #c98b4f; }
+.prize .pl { font-size: 10pt; font-weight: 700; }
+.prize .amt { font-size: 26pt; font-weight: 800; color: var(--jade); line-height: 1.05; }
+.prize .sub { font-size: 8.5pt; color: #4a5a57; }
+.match { margin-top: .1in; background: var(--mint); border-radius: .1in; padding: .08in .16in; font-size: 10pt; font-weight: 600; text-align: center; }
+
+.cols { display: grid; grid-template-columns: 1fr 1fr; gap: .3in; margin-top: .2in; }
+.cols h3 { font-size: 12.5pt; font-weight: 800; margin-bottom: .06in; display: flex; align-items: center; gap: .08in; }
+.cols h3 i { width: .26in; height: .26in; border-radius: .06in; background: var(--jade); display: inline-block; }
+.cols ul { list-style: none; }
+.cols li { font-size: 10pt; line-height: 1.38; padding: .035in 0 .035in .2in; position: relative; }
+.cols li::before { content: ""; position: absolute; left: 0; top: .1in; width: .09in; height: .09in; border-radius: 50%; background: var(--lime); }
+.cols li b { font-weight: 700; }
+
+/* bottom */
+.bottom { margin-top: auto; background: var(--jade); color: #fff; display: grid; grid-template-columns: 1fr 1.3in; gap: .3in; align-items: center; padding: .18in .5in; }
+.bottom h4 { font-size: 15pt; font-weight: 800; line-height: 1.15; }
+.bottom p { font-size: 9.5pt; margin-top: .06in; color: #e5f5ef; }
+.bottom .url { margin-top: .08in; font-size: 10pt; font-weight: 700; color: #fff; }
+.qr { background: #fff; border-radius: .12in; padding: .07in; }
+.qr img { width: 100%; display: block; }
+.qr span { display: block; text-align: center; font-size: 7.5pt; font-weight: 700; color: var(--dark); margin-top: .02in; }
+.fans { background: var(--dark); color: #dcebe6; font-size: 9pt; padding: .12in .5in; display: flex; justify-content: space-between; align-items: center; }
+.fans b { color: var(--lime); }
+.fine { font-size: 6.8pt; color: #8fa9a3; }
+</style>
+</head>
+<body>
+<div class="page">
+  <div class="top">
+    <svg class="tri" viewBox="0 0 400 300" preserveAspectRatio="xMaxYMid slice" aria-hidden="true">
+      <polygon points="150,0 400,0 400,300" fill="#048667" opacity=".55"/>
+      <polygon points="245,0 400,0 400,190" fill="#089f45" opacity=".55"/>
+      <polygon points="325,0 400,0 400,90" fill="#9acb3a" opacity=".85"/>
+    </svg>
+    <div class="lockup"><img src="gc-logo-tag-white.png" alt="Great Clips"><span>Franchisees of Cleveland-Akron-Canton</span></div>
+    <div class="eyebrow">Northeast Ohio’s student haircut competition</div>
+    <h1>Create the Cut <em>2027</em></h1>
+    <div class="date"><b>Sunday, March 14, 2027</b><span>Don Umerley Civic Center · 21016 Hilliard Blvd, Rocky River</span></div>
+  </div>
+
+  <div class="photo"></div>
+
+  <div class="body">
+    <div class="h2">$4,500 in prizes <small>in professional tools or toward tuition</small></div>
+    <div class="prizes">
+      <div class="prize"><div class="pl">1st Place</div><div class="amt">$1,000</div><div class="sub">tools or tuition</div></div>
+      <div class="prize p2"><div class="pl">2nd Place</div><div class="amt">$750</div><div class="sub">tools or tuition</div></div>
+      <div class="prize p3"><div class="pl">3rd Place</div><div class="amt">$500</div><div class="sub">tools or tuition</div></div>
+    </div>
+    <div class="match">+ every winner’s school receives a matching gift — a check or tools for the program</div>
+
+    <div class="cols">
+      <div>
+        <h3><i></i>The competition</h3>
+        <ul>
+          <li><b>Round 1:</b> shear cut &amp; style — about 40 min</li>
+          <li><b>Round 2:</b> a fade of your choice — about 40 min</li>
+          <li>Cut on mannequins, scored by a panel of judges</li>
+          <li>Free to compete</li>
+        </ul>
+      </div>
+      <div>
+        <h3><i></i>Who can compete</h3>
+        <ul>
+          <li><b>Current cosmetology students</b> only</li>
+          <li>Must be <b>nominated by your cosmetology instructor</b></li>
+          <li>Up to <b>two students</b> per school</li>
+          <li>Students: tell your instructor you want in!</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="bottom">
+    <div>
+      <h4>Students: show us you’re interested.<br>Instructors: get the nomination form.</h4>
+      <p>Scan to join the interest list — we’ll email nominations, start time and event details as soon as they’re announced.</p>
+      <div class="url">palexharris.github.io/create-the-cut</div>
+    </div>
+    <div class="qr"><img src="qr-signup.png" alt="QR code to sign up"><span>SCAN TO SIGN UP</span></div>
+  </div>
+  <div class="fans">
+    <span><b>Family &amp; fans welcome!</b> Free to watch · light refreshments · trivia &amp; giveaways</span>
+    <span class="fine">Great Clips® salons are independently owned and operated.</span>
+  </div>
+</div>
+</body>
+</html>
