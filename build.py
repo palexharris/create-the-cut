@@ -322,7 +322,7 @@ def build_past():
         if y['winners']:
             pod = '<div class="podium">' + ''.join(
                 f'<div class="winner p{i}">'
-                + (f'<img src="{w["photo"]}" data-full="{w["photo"]}" alt="{e(w["name"])}, {w["place"]} place {y["year"]}" loading="lazy" style="border-radius:10px;margin:-6px -6px 16px;width:calc(100% + 12px);aspect-ratio:4/3;object-fit:cover;cursor:zoom-in">' if w.get('photo') else '')
+                + (f'<img src="{w["photo"]}" data-full="{w["photo"]}" alt="{e(w["name"])}, {w["place"]} place {y["year"]}" loading="lazy" style="border-radius:10px;margin:-6px -6px 16px;width:calc(100% + 12px);aspect-ratio:4/3;object-fit:cover;object-position:center 30%;cursor:zoom-in">' if w.get('photo') else '')
                 + f'<div class="medal">{w["place"]}</div><div class="nm">{e(w["name"])}</div><div class="sc">{e(w["school"])}</div>'
                 + (f'<div class="amt"><b>{money(w["amount"])}</b> to the student{" (" + ("tool package" if w["choice"] == "tools" else "cash") + ")" if w.get("choice") else ""} + <b>{money(w["amount"])}</b> to the school</div>' if w.get('amount') else '')
                 + (f'<div class="amt">{e(w["prize_text"])}</div>' if w.get('prize_text') else '')

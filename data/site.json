@@ -57,21 +57,24 @@
           "name": "Alexis Heidinger",
           "school": "Wayne County Schools Career Center (Adult Education)",
           "amount": 1000,
-          "choice": "cash"
+          "choice": "cash",
+          "photo": "assets/img/gallery/2026/ctc2026-17.jpg"
         },
         {
           "place": "2nd",
           "name": "Alece Evanto",
           "school": "Glen Oak High School",
           "amount": 750,
-          "choice": "tools"
+          "choice": "tools",
+          "photo": "assets/img/gallery/2026/ctc2026-18.jpg"
         },
         {
           "place": "3rd",
           "name": "Marianne Harrington",
           "school": "Cuyahoga Valley Career Center",
           "amount": 500,
-          "choice": "tools"
+          "choice": "tools",
+          "photo": "assets/img/gallery/2026/ctc2026-19.jpg"
         },
         {
           "place": "4th",
@@ -360,19 +363,22 @@
           "place": "1st",
           "name": "John Paul Kish",
           "school": "A-Tech (Ashtabula)",
-          "prize_text": "$3,000 prize package: tool kit + gift to the school"
+          "prize_text": "$3,000 prize package: tool kit + gift to the school",
+          "photo": "assets/img/gallery/2024/ctc2024-21.jpg"
         },
         {
           "place": "2nd",
           "name": "Tara Lesiak",
           "school": "Auburn Career Center",
-          "prize_text": "$1,500 prize package: tool kit + gift to the school"
+          "prize_text": "$1,500 prize package: tool kit + gift to the school",
+          "photo": "assets/img/gallery/2024/ctc2024-22.jpg"
         },
         {
           "place": "3rd",
           "name": "Mayli Austin",
           "school": "EHOVE Career Center (Adult Education)",
-          "prize_text": "$1,000 prize package: tool kit + gift to the school"
+          "prize_text": "$1,000 prize package: tool kit + gift to the school",
+          "photo": "assets/img/gallery/2024/ctc2024-23.jpg"
         }
       ],
       "participants": [
