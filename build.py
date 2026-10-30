@@ -165,7 +165,9 @@ def build_home():
     cd = ''
     if EV.get('countdown_iso'):
         cd = f'<div class="countdown" data-to="{EV["countdown_iso"]}"><div><b data-d>–</b><small>days to go</small></div></div>'
-    w25 = next(y for y in YEARS if y['year'] == 2025)['winners']
+    champ_year = max(y['year'] for y in YEARS if y['winners'])
+    champ = next(y for y in YEARS if y['year'] == champ_year)['winners'][0]
+    champ_how = {'tuition': ' toward tuition', 'tools': ' in professional tools'}.get(champ.get('choice'), ' to the student')
     body = f'''
 <section class="hero"><div class="hero-bg" style="background-image:url('assets/img/gallery/2025/ctc2025-19.jpg')"></div><div class="wrap">
   <span class="eyebrow">Northeast Ohio’s student haircut competition</span>
@@ -207,11 +209,11 @@ def build_home():
 </div></section>
 
 <section class="band-mint"><div class="wrap split">
-  <img src="{w25[0]["photo"]}" alt="{e(w25[0]["name"])} holding the first-place check at Create the Cut 2025" loading="lazy">
+  <img src="{champ["photo"]}" alt="{e(champ["name"])} holding the first-place check at Create the Cut {champ_year}" loading="lazy" style="object-position:center 22%">
   <div>
-    <span class="eyebrow" style="color:var(--jade)">2025 Champion</span>
-    <h2>{e(w25[0]["name"])}</h2>
-    <p style="font-size:1.1rem">{e(w25[0]["school"])} — {money(w25[0]["amount"])} to the student and {money(w25[0]["amount"])} to the school.</p>
+    <span class="eyebrow" style="color:var(--jade)">{champ_year} Champion</span>
+    <h2>{e(champ["name"])}</h2>
+    <p style="font-size:1.1rem">{e(champ["school"])} — {money(champ["amount"])}{champ_how}, plus {money(champ["amount"])} to the school.</p>
     <p>“We’ve had winners who jump up and down, laughing and crying, in total disbelief they have won.” — Alex Harris, Great Clips franchisee</p>
     <a class="btn btn-jade" href="past-events.html">Meet every winner</a>
   </div>
