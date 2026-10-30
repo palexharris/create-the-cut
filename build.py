@@ -290,7 +290,7 @@ def build_event():
 <section class="band-gray"><div class="wrap grid g2">
   <div class="card">{icon("checkmark")}<h3>Eligibility</h3>
     <ul>
-      <li><b>Currently enrolled</b> in a cosmetology program in Northeast Ohio — graduates are not eligible.</li>
+      <li><b>Currently enrolled</b> in a cosmetology program in Northeast Ohio.</li>
       <li>Nominated by a cosmetology instructor at your school — students cannot nominate themselves.</li>
       <li>Signed Affidavit of Eligibility &amp; Release — a parent or guardian also signs if you’re under 18.</li>
     </ul></div>
@@ -443,7 +443,7 @@ FAQ = [
         ('Can family and friends come watch?', 'Yes! Spectators are welcome — no sign-up needed. Light refreshments are provided, and there’s trivia with giveaways for the crowd while competitors cut. The cheering section is a big part of the fun.'),
     ]),
     ('Competing', [
-        ('Who is eligible?', 'Only current cosmetology students — currently enrolled in a Northeast Ohio cosmetology program and nominated by an instructor at their school. Graduates are not eligible.'),
+        ('Who is eligible?', 'Only current cosmetology students — currently enrolled in a Northeast Ohio cosmetology program and nominated by an instructor at their school.'),
         ('How do I enter?', 'Students can’t enter themselves — <b>all nominations must come from cosmetology school instructors</b>. Fill out the <a href="signup.html?role=student">student interest form</a> so we know you’re interested, then let your instructor know you want to compete. Instructors can sign up <a href="signup.html?role=instructor">here</a> to receive the nomination form.'),
         ('Does the student interest form enter me in the competition?', 'No. The student form only tells us you’re interested so we can keep you posted. To compete, you must be nominated by your cosmetology school instructor.'),
         ('How many students can each school send?', 'Each program may nominate up to two students.'),
