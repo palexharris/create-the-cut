@@ -163,13 +163,17 @@ section { padding: clamp(52px, 7vw, 88px) 0; }
 .meta { display: flex; flex-wrap: wrap; gap: 8px; }
 .podium { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 16px; margin: 26px 0; }
 @media (max-width: 760px) { .podium { grid-template-columns: 1fr; } }
-.winner { border-radius: var(--radius); padding: 22px; background: var(--dark); color: #fff; position: relative; overflow: hidden; }
+.winner { border-radius: var(--radius); padding: 22px; background: var(--dark); color: #fff; position: relative; overflow: hidden; display: flex; flex-direction: column; }
+.winner > * { flex-shrink: 0; }
+.winner .medal { align-self: flex-start; }
+.winner .sc { margin-bottom: 14px; }
+.winner .sc + .amt { margin-top: auto; }
 .winner .medal { width: 46px; height: 46px; border-radius: 50%; display: grid; place-items: center; font-weight: 800; color: var(--dark); background: var(--marigold); margin-bottom: 12px; }
 .winner.p2 .medal { background: #d5dddb; }
 .winner.p3 .medal { background: #d9a06b; }
 .winner .nm { font-size: 1.3rem; font-weight: 700; line-height: 1.2; }
 .winner .sc { color: var(--mint); font-size: .95rem; margin-top: 4px; }
-.winner .amt { margin-top: 14px; font-size: .88rem; color: #cde6de; }
+.winner .amt { margin-top: 6px; font-size: .88rem; color: #cde6de; }
 .winner .amt b { color: var(--lime); }
 .pending { border: 2px dashed var(--line); border-radius: var(--radius); padding: 22px; color: var(--muted); background: #fff; margin: 22px 0; }
 details.roster { background: #fff; border: 1px solid var(--line); border-radius: var(--radius); margin-top: 18px; }

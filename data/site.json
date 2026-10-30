@@ -363,22 +363,25 @@
           "place": "1st",
           "name": "John Paul Kish",
           "school": "A-Tech (Ashtabula)",
-          "prize_text": "$3,000 prize package: tool kit + gift to the school",
-          "photo": "assets/img/gallery/2024/ctc2024-21.jpg"
+          "photo": "assets/img/gallery/2024/ctc2024-21.jpg",
+          "amount": 1500,
+          "choice": "tools"
         },
         {
           "place": "2nd",
           "name": "Tara Lesiak",
           "school": "Auburn Career Center",
-          "prize_text": "$1,500 prize package: tool kit + gift to the school",
-          "photo": "assets/img/gallery/2024/ctc2024-22.jpg"
+          "photo": "assets/img/gallery/2024/ctc2024-22.jpg",
+          "amount": 750,
+          "choice": "tools"
         },
         {
           "place": "3rd",
           "name": "Mayli Austin",
           "school": "EHOVE Career Center (Adult Education)",
-          "prize_text": "$1,000 prize package: tool kit + gift to the school",
-          "photo": "assets/img/gallery/2024/ctc2024-23.jpg"
+          "photo": "assets/img/gallery/2024/ctc2024-23.jpg",
+          "amount": 500,
+          "choice": "tools"
         }
       ],
       "participants": [
