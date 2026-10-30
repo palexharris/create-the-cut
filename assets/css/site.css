@@ -142,11 +142,14 @@ section { padding: clamp(52px, 7vw, 88px) 0; }
 .sched li { display: grid; grid-template-columns: 130px 1fr; gap: 16px; padding: 14px 0; border-bottom: 1px solid var(--line); }
 .sched li b { color: var(--jade-ink); }
 @media (max-width: 520px) { .sched li { grid-template-columns: 1fr; gap: 2px; } }
-.glance { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 0; border: 1px solid var(--line); border-radius: var(--radius); overflow: hidden; background: #fff; }
+.glance { display: grid; grid-template-columns: repeat(3, 1fr); gap: 0; border: 1px solid var(--line); border-radius: var(--radius); overflow: hidden; background: #fff; }
 .glance div { padding: 22px; border-right: 1px solid var(--line); border-bottom: 1px solid var(--line); }
 .glance small { display: block; text-transform: uppercase; letter-spacing: .1em; font-weight: 700; font-size: .72rem; color: var(--jade-ink); margin-bottom: 4px; }
 .glance strong { display: block; font-size: 1.12rem; color: var(--dark); }
 .glance span { color: var(--muted); font-size: .92rem; }
+.glance { margin-right: 0; } .glance div { margin: 0 -1px -1px 0; }
+@media (max-width: 860px) { .glance { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 520px) { .glance { grid-template-columns: 1fr; } }
 .tag { display: inline-block; background: var(--mint); color: var(--dark); font-weight: 600; font-size: .78rem; padding: 3px 10px; border-radius: 999px; }
 .tba { background: #fff4d6; color: #6b4b00; }
 
