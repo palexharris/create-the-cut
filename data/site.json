@@ -1,6 +1,6 @@
 {
   "_readme": "Edit this file, then run: python3 build.py  (regenerates every .html page). Fields marked _todo still need confirming.",
-  "form_endpoint": "",
+  "form_endpoint": "https://script.google.com/macros/s/AKfycbxhGok4RwR6YNYIdYSElaTFRPRRoa_RL0BQTPtvyMzGsrwK3M20iVQeNRjaQBgdHXavgg/exec",
   "_form_endpoint_help": "Paste the Google Apps Script web-app URL here (see apps-script/README.md). Until it is set, the sign-up form shows a 'coming soon' note instead of submitting.",
   "contact_email": "",
   "_contact_email_help": "Optional public contact address shown in the footer + FAQ. Leave blank to hide.",
