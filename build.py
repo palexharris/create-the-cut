@@ -55,7 +55,7 @@ def page(fname, title, desc, body, hero_img=None):
 <meta name="description" content="{e(desc)}">
 <meta property="og:title" content="{e(title)}">
 <meta property="og:description" content="{e(desc)}">
-<meta property="og:image" content="assets/img/gallery/2025/ctc2025-01.jpg">
+<meta property="og:image" content="https://createthecutneo.com/assets/img/gallery/2025/ctc2025-01.jpg">
 <meta name="theme-color" content="#073b3a">
 <link rel="icon" href="assets/icons/shears.svg" type="image/svg+xml">
 <link rel="preconnect" href="https://fonts.googleapis.com">
